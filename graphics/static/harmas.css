@@ -1,0 +1,64 @@
+#harmas {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    height: 20rem;
+}
+
+#kepszerk {
+    background-image: url('../kep/woman-2435605_1280-169.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+#keppaly {
+    background-image: url('../kep/photographer-2179204_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+#aikep {
+    background-image: url('../kep/tengrai_image_1707657722_059395.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#conceptart {
+    background-image: url('../muv/digitalhands.jpg');
+    background-size: cover;
+    color: white;
+}
+#storyboard {
+    background-image: url('../muv/storyboarding-books-best.jpg');
+    background-size: cover;
+    color: white;
+}
+#manga {
+    background-image: url('../muv/cartoon-5190961_1280.jpg');
+    background-size: cover;
+    color: white;
+}
+
+#gamejam {
+    background-image: url('../jatek/game-over-7952252_1280.png');
+    background-size: cover;
+    color: white;
+}
+#esport {
+    background-image: url('../jatek/playstation-6689793_1280-169.jpg');
+    background-size: cover;
+    color: white;
+}
+#cosplay {
+    background-image: url('../jatek/girl-4512041_1280.jpg');
+    background-size: cover;
+    color: white;
+}
+
+#harmas h2, #harmas p {padding: 0 2rem;}
+
+#kepszerk:hover, #keppaly:hover, #aikep:hover, #cad3d:hover, #print3d:hover, #scan3d:hover, #blenderkarakter:hover, #blenderhs:hover, #blenderuv:hover, #gamejam:hover, #esport:hover, #platformer:hover, #vfx:hover, #unreal:hover, #unity:hover, #conceptart:hover, #storyboard:hover, #manga:hover, #cosplay:hover {
+    background-image: none;
+    color: #0881A3;
+    transition: .5s;
+}
