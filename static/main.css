@@ -173,6 +173,10 @@ footer a:hover {
         padding-left: 10%;
         padding-right: 10%;
         display: flex;
+
+        position: sticky;
+        top: 0;
+        z-index: 2;
     }
     .menu a {
         border-left: 1px solid white;
