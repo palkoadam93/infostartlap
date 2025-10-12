@@ -39,22 +39,6 @@
     color: white;
 }
 
-#gamejam {
-    background-image: url('../jatek/game-over-7952252_1280.png');
-    background-size: cover;
-    color: white;
-}
-#esport {
-    background-image: url('../jatek/playstation-6689793_1280-169.jpg');
-    background-size: cover;
-    color: white;
-}
-#cosplay {
-    background-image: url('../jatek/girl-4512041_1280.jpg');
-    background-size: cover;
-    color: white;
-}
-
 #harmas h2, #harmas p {padding: 0 2rem;}
 
 #kepszerk:hover, #keppaly:hover, #aikep:hover, #cad3d:hover, #print3d:hover, #scan3d:hover, #blenderkarakter:hover, #blenderhs:hover, #blenderuv:hover, #gamejam:hover, #esport:hover, #platformer:hover, #vfx:hover, #unreal:hover, #unity:hover, #conceptart:hover, #storyboard:hover, #manga:hover, #cosplay:hover {
