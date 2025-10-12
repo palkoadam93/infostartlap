@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../static/Palkotikumicon.png">
+
+    <title>Felhőszolgáltatások</title>
+    <link rel="stylesheet" href="../../static/main.css">
+    <link rel="stylesheet" href="panel.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <h1 class="network">Felhőszolgáltatások</h1>
+    </header>
+
+    <main>
+      <aside>
+        <p><a href="../../beginnet.html">Vissza</a></p>
+        <nav>
+          <ul>
+            <li><a href="felho.html">Felhőszolgáltatások</a></li>
+            <li><a href="saas.html">Szoftver</a></li>
+            <li><a href="paas.html">Platform</a></li>
+            <li><a href="#" id="aktiv">Infrastruktúra</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section>
+        <h1>IaaS - Infrastructure as a Service (infrastruktúra mint szolgáltatás)</h1>
+
+        <p>Az IaaS, vagyis "infrastruktúra mint szolgáltatás" lehetővé teszi, hogy a felhasználók bérelhető, virtuális hardver-erőforrásokat - például szervereket, tárhelyet és hálózati eszközöket - használjanak a felhőből. Ez a modell nagy rugalmasságot kínál, mivel a felhasználók maguk telepíthetik és konfigurálhatják a kívánt operációs rendszert és szoftvereket. Tipikus példái az Amazon Web Services (AWS), Microsoft Azure és Google Cloud Platform.</p>
+        <p>Az IaaS a legnagyobb szabadságot biztosító felhőszolgáltatási modell, amelyben a felhasználó gyakorlatilag bérelhető, virtuális hardver-erőforrásokat kap - például szervereket, adattárolót, hálózati rendszereket vagy tűzfalakat. Ezeket az erőforrásokat rugalmasan lehet skálázni és testre szabni, igény szerint, akár másodperc alapú számlázással. A szolgáltató kizárólag az infrastruktúra fizikai és virtualizált rétegéért felelős, minden más (pl. operációs rendszer, alkalmazások, biztonság) a felhasználó kezében van.</p>
+        <p>Az IaaS megoldásokat főként nagyobb IT-csapatok, vállalatok vagy rendszergazdák használják, akiknek speciális vagy egyedi szoftveres környezetre van szükségük. Emellett ideális olyan esetekben, amikor gyorsan kell új szervereket beüzemelni fejlesztési, tesztelési vagy éles környezetekhez. A legismertebb IaaS szolgáltatók közé tartozik az Amazon Web Services (AWS EC2, S3), a Microsoft Azure, a Google Cloud Platform, és az IBM Cloud.</p>
+
+        <h3>Amazon EC2</h3>
+
+        <p>Az Amazon EC2 (Elastic Compute Cloud) az Amazon Web Services (AWS) egyik legfontosabb és legismertebb szolgáltatása. Ez a megoldás lehetővé teszi, hogy a felhasználók virtuális gépeket - úgynevezett példányokat (instances) - indítsanak és működtessenek a felhőben, szükség szerint konfigurálva és skálázva őket. Az EC2 fő célja, hogy rugalmas, gyorsan elérhető és költséghatékony számítási kapacitást biztosítson, anélkül, hogy a felhasználónak saját fizikai szervereket kellene vásárolnia vagy karbantartania.</p>
+        <p>A szolgáltatás segítségével könnyedén kiválasztható az operációs rendszer (például Linux vagy Windows), valamint a hardverkonfiguráció - mint a processzormagok száma, memória mérete, tárolási kapacitás vagy hálózati beállítások. A felhasználók így teljes kontrollt kapnak a saját virtuális környezetük felett. Egy EC2 példány percek alatt elindítható, és az is egyszerűen beállítható, hogy milyen programokat futtasson, vagy milyen jogosultságokkal rendelkezzen. A szolgáltatás lehetőséget nyújt arra is, hogy a felhasználók saját Amazon Machine Image-et (AMI) hozzanak létre, így új példányokat indíthatnak ugyanazzal a konfigurációval.</p>
+        <p>Az EC2 egyik legnagyobb előnye a rugalmasság és a skálázhatóság. A kapacitás szükség esetén gyorsan növelhető vagy csökkenthető - akár manuálisan, akár automatikusan az Auto Scaling funkcióval. Ezzel biztosítható, hogy az alkalmazások mindig a megfelelő erőforrásokkal rendelkezzenek, felesleges költségek nélkül. Emellett az EC2 szorosan integrálható más AWS-szolgáltatásokkal is, például az Amazon S3 (tárhely), RDS (relációs adatbázis), CloudWatch (monitorozás) vagy IAM (hozzáférés-kezelés) rendszerekkel, így egy teljes értékű, biztonságos és jól felügyelhető környezet építhető ki.</p>
+        <p>A gyakorlatban az EC2-t rendkívül sokféle célra használják. Ide tartozik például weboldalak és webalkalmazások kiszolgálása, fejlesztési és tesztelési környezetek gyors felépítése, nagy számítási igényű feladatok végrehajtása (például big data elemzések, gépi tanulás), vagy éppen vállalati rendszerek költöztetése a felhőbe. Mindez lehetővé teszi, hogy a felhasználók csak azért az időért és kapacitásért fizessenek, amit valóban használnak.</p>
+        <p>Az árképzés is rugalmasan alakítható. Az on-demand példányok perc alapú díjazással működnek, így ideálisak rövid távú vagy változó erőforrásigényű alkalmazásokhoz. Az előre lefoglalt példányok (Reserved Instances) kedvezményes áron kínálnak hosszú távú használatot (1 vagy 3 évre), míg a spot példányok akár 90%-os kedvezménnyel is igénybe vehetők - igaz, ezek bármikor megszakíthatók. Új AWS-felhasználók számára ráadásul elérhető az ingyenes csomag (Free Tier), amely bizonyos példánytípusokat - például a t2.micro - havonta 750 órán keresztül térítésmentesen tesz kipróbálhatóvá.</p>
+        <p>A biztonság kulcsfontosságú az EC2 esetében. A virtuális gépekhez való hozzáférés kulcspáros SSH hitelesítéssel történik, és finomhangolható tűzfal-beállításokkal (Security Groups) szabályozható, hogy mely IP-címekről és portokon keresztül lehessen hozzáférni az erőforrásokhoz. Az IAM szolgáltatás lehetővé teszi a hozzáférési jogosultságok részletes kezelését, az EBS-meghajtók pedig titkosíthatók, így az adatok védelme minden szinten biztosított.</p>
+        <p>Összefoglalva, az Amazon EC2 egy nagy teljesítményű, skálázható és sokoldalú felhőszolgáltatás, amely lehetővé teszi a felhasználók számára, hogy gyakorlatilag bármilyen számítási feladatot a felhőbe helyezzenek át. Rugalmas árazási modellje, fejlett konfigurálhatósága és szoros integrációja más AWS-szolgáltatásokkal ideális megoldássá teszi kezdők, fejlesztők, rendszergazdák és nagyvállalatok számára egyaránt.</p>
+
+        <h3>Windows Azure</h3>
+        <p><a href="https://drive.google.com/file/d/1E9LfquUrbOXliOPKTDxAE1xEsYzfszCT/view?usp=sharing" target=_blank>Azure prezentáció</a></p>
+
+        <p>A Microsoft Azure (korábbi nevén Windows Azure) a Microsoft felhőalapú platformja, amely széles körű szolgáltatásokat kínál számítási kapacitás, tárolás, adatbáziskezelés, mesterséges intelligencia, hálózatépítés, analitika és fejlesztés területén. Az Azure célja, hogy segítsen a vállalkozásoknak, fejlesztőknek és IT szakembereknek modern, skálázható és megbízható alkalmazásokat építeni és futtatni anélkül, hogy saját adatközpontot kellene üzemeltetniük. A platform lehetővé teszi mind hibrid, mind teljesen felhőalapú megoldások kialakítását, integrálva a már meglévő Microsoft-technológiákat (mint a Windows Server, SQL Server vagy Active Directory).</p>
+        <p>A Microsoft Azure egy IaaS (Infrastructure as a Service) és PaaS (Platform as a Service) modellre épülő rendszer, de kínál SaaS (Software as a Service) szolgáltatásokat is, például az Office 365 formájában. Az IaaS szolgáltatások lehetővé teszik, hogy a felhasználók saját virtuális gépeket (Windows vagy Linux alapúakat) indítsanak, konfiguráljanak és menedzseljenek, míg a PaaS szolgáltatások kész futtatási környezetet biztosítanak például webalkalmazások, API-k vagy mobilalkalmazások számára. A szolgáltatások egy egységes portálról kezelhetők, ahol egyszerűen hozhatók létre és monitorozhatók az erőforrások, akár néhány kattintással.</p>
+        <p>Az Azure egyik nagy előnye a Microsoft-ökoszisztémába való szoros integráció. A vállalatok, amelyek már használnak Windows Server, Active Directory, Microsoft SQL vagy más Microsoft-alapú megoldásokat, könnyedén bővíthetik rendszereiket az Azure-on keresztül. Emellett a platform támogatja a nyílt forráskódú technológiákat is, mint például a Linux, PostgreSQL, Java, PHP, Python és Node.js, így nemcsak Microsoft-környezetekhez illeszkedik. Az Azure DevOps szolgáltatásai, a GitHub-integráció és a CI/CD (folyamatos integráció és szállítás) támogatás lehetővé teszi a modern fejlesztői módszertanok alkalmazását.</p>
+        <p>A platform számos globális adatközponttal rendelkezik, és lehetővé teszi, hogy a felhasználók a saját földrajzi régiójukban tárolják adataikat, biztosítva ezzel a megfelelést a helyi adatvédelmi szabályozásoknak. Emellett az Azure megbízható biztonsági háttérrel rendelkezik, beépített titkosítási lehetőségekkel, tűzfalakkal, hozzáférés-kezeléssel (Azure Active Directory), valamint auditálási és naplózási funkciókkal. A Microsoft nagy hangsúlyt fektet a szabványoknak és tanúsítványoknak való megfelelésre (pl. ISO, GDPR, HIPAA), így az Azure használata számos iparágban biztonságos és jogilag megfelel.</p>
+        <p>Gyakorlati szempontból az Azure ideális választás vállalatok és fejlesztők számára egyaránt, legyen szó egyszerű webalkalmazásról, üzleti alkalmazásról, virtuális asztalokról, gépi tanulási projektről vagy IoT (Internet of Things) megoldásról. A szolgáltatás lehetővé teszi a dinamikus skálázást, így a rendszerek mindig az aktuális terheléshez tudnak igazodni. Ráadásul az Azure Free Tier segítségével új felhasználók ingyenesen kipróbálhatnak számos szolgáltatást, például 750 óra virtuális gépet, adatbázist vagy AI-funkciókat havonta.</p>
+        <p>Összefoglalva, a Microsoft Azure egy sokoldalú, nagy teljesítményű és jól integrált felhőplatform, amely képes kiszolgálni a modern vállalati IT- és fejlesztési igényeket. Legyen szó egyszerű alkalmazások hosztolásáról, komplex vállalati rendszerek átköltöztetéséről, vagy új digitális szolgáltatások építéséről, az Azure megbízható és rugalmas alapot biztosít. A Microsoft technológiákba való mély integráció, a globális lefedettség, a biztonság és a fejlett fejlesztői eszközök miatt a platform kiemelkedő választás a digitális transzformációhoz.</p>
+      </section>
+    </main>
+    <footer>
+      <p>Csak az önálló tanulás bír tartós értékkel. &#x2022; <a href="https://www.demokratikusneveles.hu/blog/gatto-miert-nem-oktatnak/" target="_blank">John Taylor Gatto</a></p>
+      <img src="../static/cc.logo.large.png" alt="cc">
+    </footer>
+
+    <script src="panel.js"></script>
+  </body>
+</html>
