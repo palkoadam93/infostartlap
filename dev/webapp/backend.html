@@ -30,6 +30,40 @@
         </nav>
       </aside>
       <section>
+        <h1>Backend-fejlesztés — ismeretterjesztő útmutató diákoknak</h1>
+        <p>A backend-fejlesztés a szoftverfejlesztés „láthatatlan” oldala — minden, ami a felhasználó által látott felület mögött történik. Ha a frontend az, amit a felhasználó közvetlenül kezel, akkor a backend az a motor, ami az adatokat kezeli, feldolgozza és biztonságosan tárolja. Ez a terület hatalmas jelentőséggel bír minden modern web- és mobilalkalmazás működésében, hiszen itt történik a logika megvalósítása, az adatok feldolgozása, az API-k kezelése és az integráció más szolgáltatásokkal.</p>
+
+        <h2>Mi az a backend?</h2>
+        <p>A backend a szoftver azon része, amely a szerveren fut. Feladata, hogy fogadja a felhasználói kéréseket, kommunikáljon az adatbázissal, végrehajtsa az üzleti logikát, majd az eredményt visszaküldje a felhasználónak. Például, amikor bejelentkezel egy weboldalon, az űrlapadatokat a backend dolgozza fel: ellenőrzi, hogy létezik-e a felhasználó az adatbázisban, megfelelnek-e az adatok, és ha igen, visszaadja a választ, hogy a belépés sikeres volt.</p>
+
+        <p>Ez a háttérmunka minden modern digitális szolgáltatás alapja: közösségi média, online boltok, játékok, oktatási platformok, pénzügyi rendszerek — mindegyik mögött egy jól megtervezett backend dolgozik.</p>
+
+        <h2>Backend-fejlesztés feladatai</h2>
+        <p>A backend-fejlesztő felelős az adatok tárolásáért, az üzleti logika működtetéséért, az alkalmazás biztonságáért és a kommunikációért más rendszerekkel. Ez magában foglalja az adatbázisok tervezését, a szerverek konfigurálását, az API-k készítését, valamint a hibakezelés és jogosultságok beállítását is. Egy jól megírt backend stabil, gyors, biztonságos és könnyen bővíthető.</p>
+
+        <h2>Főbb technológiák</h2>
+        <p>A backend-fejlesztés több programozási nyelven is végezhető. A leggyakrabban használt nyelvek közé tartozik a <strong>Python</strong> (Django, Flask), a <strong>JavaScript</strong> (Node.js, Express), a <strong>Java</strong> (Spring Boot), a <strong>PHP</strong> (Laravel, Symfony) és a <strong>Go</strong>. Mindegyik nyelvnek megvannak az erősségei: a Python például egyszerű és jól olvasható, a Node.js rendkívül gyors és hatékony valós idejű alkalmazásoknál, a Java pedig robusztus és ipari környezetben bevált megoldás.</p>
+
+        <p>Az adatbázisok szintén kulcsszerepet játszanak a backendben. Két fő típus létezik: a <strong>relációs adatbázisok</strong> (pl. MySQL, PostgreSQL), ahol az adatok táblákban, kapcsolatokkal tárolódnak, és a <strong>NoSQL adatbázisok</strong> (pl. MongoDB, Redis), amelyek rugalmasabb adattárolást biztosítanak. A választás attól függ, milyen típusú adatokat kezel az alkalmazás, és milyen teljesítményre van szükség.</p>
+
+        <h2>API-k és adatátvitel</h2>
+        <p>A backend egyik legfontosabb szerepe az, hogy kapcsolatot teremtsen a kliens (frontend vagy mobilalkalmazás) és a szerver között. Ez jellemzően API-kon (Application Programming Interface) keresztül történik. Az API olyan, mint egy „kapu”: szabályozza, milyen adatok kérhetők le és milyen formában. A legelterjedtebb formátum a <strong>REST API</strong>, amely HTTP-kéréseket (GET, POST, PUT, DELETE) használ, és JSON-formátumban továbbít adatokat. Egyre népszerűbb a <strong>GraphQL</strong> is, ami rugalmasabb lekérdezéseket tesz lehetővé, így a kliens pontosan azt az adatot kapja meg, amire szüksége van.</p>
+
+        <h2>Biztonság a backendben</h2>
+        <p>A biztonság a backend-fejlesztés egyik legfontosabb területe. A fejlesztőknek gondoskodniuk kell arról, hogy az adatok védve legyenek az illetéktelen hozzáféréstől és támadásoktól. Ez magában foglalja az <strong>autentikáció</strong> (bejelentkezés azonosítás) és <strong>autorizáció</strong> (hozzáférés-ellenőrzés) folyamatát, a jelszavak titkosítását, az SQL-injekció elleni védelmet, valamint az adatok titkosított továbbítását HTTPS-en keresztül. Egyetlen rosszul konfigurált API vagy hiányos biztonsági beállítás komoly kockázatot jelenthet, ezért a backend-fejlesztésben a biztonsági alapelvek betartása kiemelt fontosságú.</p>
+
+        <h2>Fejlesztési folyamat és tesztelés</h2>
+        <p>A backend-fejlesztés nem csak kódolás. Fontos a tervezés, a verziókezelés, a kód tesztelése és a folyamatos integráció (CI/CD) biztosítása. A tesztelés során ellenőrizni kell az API-k működését, a hibakezelést és az adatbázis-műveleteket. A fejlesztők gyakran automatizált teszteket írnak, hogy gyorsan és megbízhatóan ellenőrizhessék a rendszer stabilitását. Emellett fontos a kód áttekintése (code review), amely segít kiszűrni a hibákat és javítja a kód minőségét.</p>
+
+        <h2>Skálázhatóság és teljesítmény</h2>
+        <p>Egy jó backend nemcsak működik, hanem képes kezelni a növekvő terhelést is. A skálázhatóság azt jelenti, hogy a rendszer nagyobb számú felhasználóval vagy adatmennyiséggel is megbirkózik anélkül, hogy lelassulna. Ennek eléréséhez gyakran használnak gyorsítótárakat (cache), terheléselosztást (load balancing) és mikro-szolgáltatásokat (microservices). Ezek lehetővé teszik, hogy az alkalmazás különálló részekre bontható legyen, amelyek önállóan is fejleszthetők és frissíthetők.</p>
+
+        <h2>Trendek a backend-fejlesztésben</h2>
+        <p>A 2020-as évek közepén a backend-fejlesztés egyre inkább a <strong>felhőalapú megoldások</strong> irányába mozdul. A szolgáltatások, mint az AWS, Google Cloud vagy Azure, egyszerűvé teszik a szerverek és adatbázisok kezelését, valamint automatikusan gondoskodnak a méretezésről és a biztonságról. Emellett a <strong>serverless</strong> architektúrák is terjednek, ahol a fejlesztő csak a logikát írja meg, a szerver működtetését pedig a felhőplatform végzi. Továbbá nő az igény az <strong>AI-integrációra</strong> és az adatelemzésre, amelyek szintén a backend oldalon kapnak helyet.</p>
+
+        <h2>Összefoglalás</h2>
+        <p>A backend-fejlesztés a modern alkalmazások alapja. Bár a felhasználók nem látják közvetlenül, minden kattintás, adatküldés és bejelentkezés mögött egy gondosan megírt háttérrendszer dolgozik. A backend-fejlesztő nemcsak programoz, hanem problémákat old meg: adatokat kezel, rendszereket épít, és biztosítja, hogy az alkalmazás gyors, biztonságos és megbízható legyen. Ha érdekel az alkalmazások „belső világa”, a backend-fejlesztés izgalmas és mély szakmai út lehet számodra.</p>
+
         <h3>WebMania.cc - REST API</h3>
         <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=qBNCti0wZRpoaf8w&amp;list=PLbcJ_vPJW9XNhmyKlDerU-HBU9oON38jq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
       </section>
