@@ -9,6 +9,10 @@ h1 {
     color: orangered;
 }
 
+h1 a:visited {
+    color: inherit;
+}
+
 article h3, article p {
     padding: .5rem;
     margin: 0;
