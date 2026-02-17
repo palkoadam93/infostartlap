@@ -1,127 +1,323 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../../static/Palkotikumicon.png">
 
-    <title>Az OSI-modell alsó rétegei</title>
-    <link rel="stylesheet" href="../../static/main.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="../../static/Palkotikumicon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <title>Az OSI-modell alsó rétegei</title>
+  <link rel="stylesheet" href="../../static/main.css">
+  <link rel="stylesheet" href="terminal.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <header>
-      <h1 class="network">Az OSI-modell alsó rétegei</h1>
-    </header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
 
-    <main>
-      <aside>
-        <p><a href="../../beginnet.html">Vissza</a></p>
-        <nav>
-          <ul>
-            <li><a href="fizikai.html">Fizikai réteg</a></li>
-            <li><a href="adatkapcs.html">Adatkapcsolati réteg</a></li>
-            <li><a href="kabelek.html">Kábelek</a></li>
-            <li><a href="#" id="aktiv">Switch (kapcsoló)</a></li>
-            <li><a href="wireless.html">Vezeték nélküli</a></li>
-            <li><a href="IPv4.html">IPv4</a></li>
-            <li><a href="IPv6.html">IPv6</a></li>
-            <li><a href="halozatok.html">Hálózatok kategóriái</a></li>
-            <li><a href="szall.html">Szállítási réteg</a></li>
-            <li><a href="komm.html">Kommunikáció</a></li>
-          </ul>
-        </nav>
-      </aside>
-      <section>
-        <p>Tartalom</p>
-        <ul id="t">
-          <li><a href="#switch">Switch (kapcsoló)</a></li>
-          <li><a href="#ios">Switch IOS</a></li>
-          <li><a href="#stp">Spanning Tree</a></li>
-          <li><a href="#ech">EtherChannel</a></li>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="network">Az OSI-modell alsó rétegei</h1>
+  </header>
+
+  <main>
+    <aside>
+      <p><a href="../../beginnet.html">Vissza</a></p>
+      <nav>
+        <ul>
+          <li><a href="fizikai.html">Fizikai réteg</a></li>
+          <li><a href="adatkapcs.html">Adatkapcsolati réteg</a></li>
+          <li><a href="kabelek.html">Kábelek</a></li>
+          <li><a href="#" id="aktiv">Switch (kapcsoló)</a></li>
+          <li><a href="wireless.html">Vezeték nélküli</a></li>
+          <li><a href="IPv4.html">IPv4</a></li>
+          <li><a href="IPv6.html">IPv6</a></li>
+          <li><a href="halozatok.html">Hálózatok kategóriái</a></li>
+          <li><a href="szall.html">Szállítási réteg</a></li>
+          <li><a href="komm.html">Kommunikáció</a></li>
         </ul>
+      </nav>
+    </aside>
+    <section>
+      <p>Tartalom</p>
+      <ul id="t">
+        <li><a href="#switch">Switch (kapcsoló)</a></li>
+        <li><a href="#ios">Switch IOS</a></li>
+        <li><a href="#stp">Spanning Tree</a></li>
+        <li><a href="#ech">EtherChannel</a></li>
+      </ul>
 
-        <h1 id="#switch">Switch (kapcsoló)</h1>
+      <h1 id="#switch">Switch (kapcsoló)</h1>
 
-        <h3>PowerCert - Hub, Switch and Router explained</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1z0ULvg_pW8?si=SNDX1IN-GIm2lXQ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-        
-        <h3>CertBros - How to reset Cisco Switch</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/R-Tad4N8Zk4?si=iWFBejj7SKxd_AuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+      <h3>PowerCert - Hub, Switch and Router explained</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1z0ULvg_pW8?si=SNDX1IN-GIm2lXQ_"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        <h3>CertBros - How to Cisco Switch configuration</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zikbMZSkKuk?si=qGjqguPKKIAT7rsi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+      <h3>CertBros - How to reset Cisco Switch</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/R-Tad4N8Zk4?si=iWFBejj7SKxd_AuI"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        <h3>CertBros - How to configure port security on a Cisco Switch</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y4PT5hn-P08?si=iFeIjHm8_Y2b12ar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+      <h3>CertBros - How to Cisco Switch configuration</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zikbMZSkKuk?si=qGjqguPKKIAT7rsi"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        <h3>Kovács Ákos anyagai</h3>
-        <p><a href="https://drive.google.com/file/d/1GLCOrFFj1QOXneYYIhgB3JinhEA3ZWMv/view?usp=sharing" target=_blank>Kovács Ákos: Switchek 1</a></p>
-        <p><a href="https://drive.google.com/file/d/1ievp8QSDvUncjoeKKunrv0XlQopnRf24/view?usp=sharing" target=_blank>Kovács Ákos: Switchek 2</a></p>
-    
-        <h3>CertBros - Network Devices Explained</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eMamgWllRFY?si=um-fmr0Pku1NTfJ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+      <h3>CertBros - How to configure port security on a Cisco Switch</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y4PT5hn-P08?si=iFeIjHm8_Y2b12ar"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        <h3>PowerCert - Layer 2 vs Layer 3 Switches</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bdNS0K4Bt8U?si=G5Ff7gzHjddUHaa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-        
-        <h1 id="ios">Switch IOS</h1>
-        <p><a href="https://drive.google.com/file/d/1RDFqA8r289rBIu-9EOBU0PRLJvN9_yc6/view?usp=drive_link" target="_blank">Rendszergazda 12. Switch</a></p>
-        <p><a href="https://drive.google.com/file/d/19n5mH3kPIvKO_dQgPa5vW6QOxhnL20mI/view?usp=sharing" target=_blank>SZE Deák Kristóf: Packet Tracer IOS alapok</a></p>
-        <p>Konzolkapcsolat</p>
+      <h3>Kovács Ákos anyagai</h3>
+      <p><a href="https://drive.google.com/file/d/1GLCOrFFj1QOXneYYIhgB3JinhEA3ZWMv/view?usp=sharing"
+          target=_blank>Kovács Ákos: Switchek 1</a></p>
+      <p><a href="https://drive.google.com/file/d/1ievp8QSDvUncjoeKKunrv0XlQopnRf24/view?usp=sharing"
+          target=_blank>Kovács Ákos: Switchek 2</a></p>
 
-        <h3>CertBros: How to copy Cisco IOS to TFTP Server</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QHwfVjHL63I?si=8XCUbCGqlaNuNrHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+      <h3>CertBros - Network Devices Explained</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eMamgWllRFY?si=um-fmr0Pku1NTfJ9"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        <h3>CertBros: How to backup Cisco configuration</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MYyNjIqPCQY?si=-hLvXAopzOsDP5UB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+      <h3>PowerCert - Layer 2 vs Layer 3 Switches</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bdNS0K4Bt8U?si=G5Ff7gzHjddUHaa-"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        
-        
-        <h1 id="stp">Spanning Tree</h1>
-        <p><a href="https://drive.google.com/file/d/1CjXFIr1b5Z46pkRdcA5aGAMq5im6Y5zq/view?usp=sharing" target=_blank>SZE - Deák Kristóf: Feszítőfa-protokoll (STP)</a></p>
 
-        <h3>Peter P - STP elmélet</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y_hmBWsXguQ?si=W8m9tDlsGlfndG42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        <h3>Peter P - STP gyakorlat</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kFqVPayu8LQ?si=TF4ZQLeU7Q2tkG8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+      <h1 id="ios">Switch IOS</h1>
+      <p><a href="https://drive.google.com/file/d/1RDFqA8r289rBIu-9EOBU0PRLJvN9_yc6/view?usp=drive_link"
+          target="_blank">Rendszergazda 12. Switch</a></p>
 
-        <h3>Bordé Sándor - Spanning Tree Protocol</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jgs1zeGT_fY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+      <p>Konzolkapcsolat</p>
 
-        <h3>PowerCert - Spanning Tree Protocol</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qEDfDoCMsw4?si=6-bN6HK-gp3Ue0zD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-    
-        <h3>CertBros - Spanning Tree Protocol explained</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/japdEY1UKe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+      <h3>CertBros: How to copy Cisco IOS to TFTP Server</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QHwfVjHL63I?si=8XCUbCGqlaNuNrHQ"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        
-        
-        <h1 id="ech">EtherChannel</h1>
-        <p><a href="https://drive.google.com/file/d/139M8g30CvtUtdyqiNKX8p-EOUBRlY4hP/view?usp=sharing" target=_blank>Ethernet hálózatok redundanciája</a></p>
-        <p><a href="https://drive.google.com/file/d/1MA1ckLbYEz98rGB3XPdknu4vBef-pMLK/view?usp=sharing" target=_blank>Configuring EtherChannel</a></p>
-        <p><a href="https://drive.google.com/file/d/1ILfr6afe17GJwGS4v9yRuiqTrR4I3o43/view?usp=sharing" target=_blank>Building a switched network with redundant links</a></p>
-        <p><a href="https://drive.google.com/file/d/1MCGQsBecaLxLeG95Skrid_vStt3U9u5w/view?usp=sharing" target=_blank>Configuring EtherChannel</a></p>
+      <h3>CertBros: How to backup Cisco configuration</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MYyNjIqPCQY?si=-hLvXAopzOsDP5UB"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        <h3>Peter P - EtherChannel elmélet</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5IKoL_2UKFQ?si=HopqudsHaxMrspD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+      <h2>Legfontosabb alapkonfigurációs feladatok</h2>
 
-        <h3>Peter P - EtherChannel gyakorlat</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IRip9ziC1mo?si=4BVZmqbGeuS6pSAv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-    
-        <h3>CertBros - EtherChannel explained</h3>
-        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/j6-kadxwIFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-      </section>
-    </main>
-    <footer>
-      <p>Csak az önálló tanulás bír tartós értékkel. &#x2022; <a href="https://www.demokratikusneveles.hu/blog/gatto-miert-nem-oktatnak/" target="_blank">John Taylor Gatto</a></p>
-      <img src="../../static/cc.logo.large.png" alt="cc">
-    </footer>
-  </body>
+      <p class="section-title">Alapbeállítások</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> copy run start
+        <span class="config">Switch(config)#</span> hostname kapcsolo_neve
+        <span class="config">Switch(config)#</span> logging synchronous
+      </div>
+
+      <p class="section-title">Konzol és VTY jelszavak</p>
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> line console 0
+        <span class="config">Switch(config-line)#</span> password jelszo
+        <span class="config">Switch(config-line)#</span> login
+
+        <span class="config">Switch(config)#</span> line vty 0 15
+        <span class="config">Switch(config-line)#</span> password jelszo
+        <span class="config">Switch(config-line)#</span> login
+      </div>
+
+      <p class="section-title">Felhasználók és enable jelszó</p>
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> username admin password cisco
+        <span class="config">Switch(config)#</span> username boss secret class
+        <span class="config">Switch(config)#</span> enable password jelszo
+        <span class="config">Switch(config)#</span> enable secret jelszo
+        <span class="config">Switch(config)#</span> service password-encryption
+        <span class="config">Switch(config)#</span> banner motd #Belepes csak engedellyel!#
+      </div>
+
+      <p class="section-title">Portbeállítások</p>
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> interface fa0/2
+        <span class="config">Switch(config-if)#</span> duplex auto
+        <span class="config">Switch(config-if)#</span> speed 100
+        <span class="config">Switch(config)#</span> mac-address-table static 0123.4567.89AB vlan 1 int fa0/1
+        <span class="prompt">Switch#</span> clear mac-address-table dynamic
+      </div>
+
+      <p class="section-title">Portbiztonság</p>
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> int fa0/1
+        <span class="config">Switch(config-if)#</span> switchport mode access
+        <span class="config">Switch(config-if)#</span> switchport port-security
+        <span class="config">Switch(config-if)#</span> switchport port-security mac-address sticky
+        <span class="config">Switch(config-if)#</span> switchport port-security violation shutdown
+        <span class="config">Switch(config-if)#</span> shutdown
+        <span class="config">Switch(config-if)#</span> no shut
+      </div>
+
+      <p class="section-title">Menedzsment beállítások</p>
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> ip default-gateway 10.0.0.254
+        <span class="config">Switch(config)#</span> int vlan 1
+        <span class="config">Switch(config-if)#</span> ip address 10.0.0.1 255.0.0.0
+        <span class="config">Switch(config-if)#</span> no shut
+        <span class="config">Switch(config)#</span> ip name-server 10.1.1.1
+        <span class="config">Switch(config)#</span> ip host alfa 10.0.0.1
+      </div>
+
+      <p class="section-title">VLAN konfiguráció</p>
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> vlan 25
+        <span class="config">Switch(config-vlan)#</span> name gamma
+        <span class="config">Switch(config)#</span> int range fa0/10 - 15
+        <span class="config">Switch(config-if-range)#</span> switchport mode access
+        <span class="config">Switch(config-if-range)#</span> switchport access vlan 25
+      </div>
+
+      <p class="section-title">Trönkport beállítás</p>
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> int fa0/24
+        <span class="config">Switch(config-if)#</span> switchport mode trunk
+        <span class="config">Switch(config-if)#</span> switchport trunk native vlan 99
+        <span class="config">Switch(config-if)#</span> switchport trunk allowed vlan all
+        <span class="prompt">Switch#</span> show interfaces trunk
+      </div>
+
+      <p class="section-title">Spanning Tree Protocol (STP)</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> show spanning-tree summary
+        <span class="config">Switch(config)#</span> spanning-tree mode rapid-pvst
+        <span class="config">Switch(config)#</span> spanning-tree vlan 1 priority 4096
+        <span class="config">Switch(config)#</span> spanning-tree portfast default
+        <span class="config">Switch(config-if)#</span> spanning-tree bpduguard enable
+      </div>
+
+
+      <h2>VTP (VLAN Trunking Protocol) konfiguráció</h2>
+
+      <p class="section-title">VTP – Első módszer (vlan database)</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> vlan database
+        <span class="config">Switch(vlan)#</span> vtp domain tartomanynev
+        <span class="config">Switch(vlan)#</span> vtp password jelszo
+        <span class="config">Switch(vlan)#</span> vtp v2-mode
+        <span class="config">Switch(vlan)#</span> vtp mode server
+        <span class="config">Switch(vlan)#</span> vtp mode client
+        <span class="config">Switch(vlan)#</span> vtp mode transparent
+      </div>
+
+      <p class="section-title">VTP – Második módszer (globális konfiguráció)</p>
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> vtp domain tartomanynev
+        <span class="config">Switch(config)#</span> vtp password jelszo
+        <span class="config">Switch(config)#</span> vtp version 2
+        <span class="config">Switch(config)#</span> vtp mode server
+        <span class="config">Switch(config)#</span> vtp mode client
+        <span class="config">Switch(config)#</span> vtp mode transparent
+      </div>
+
+      <p class="section-title">VTP ellenőrzése</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> show vtp status
+        <span class="prompt">Switch#</span> show vtp password
+      </div>
+
+      <p class="section-title">VTP Pruning</p>
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> vtp pruning
+      </div>
+
+      <p class="note">
+        A VTP lehetővé teszi a VLAN információk automatikus szinkronizálását a trönk kapcsolatokon keresztül.
+        Server módban VLAN létrehozható és terjeszthető,
+        Client módban csak fogadja a módosításokat,
+        Transparent módban nem módosítja a VTP adatbázist, de továbbítja a VTP kereteket.
+        A pruning csökkenti a fölösleges VLAN forgalmat a trönkökön.
+      </p>
+
+
+
+
+      <h1 id="stp">Spanning Tree</h1>
+      <p><a href="https://drive.google.com/file/d/1CjXFIr1b5Z46pkRdcA5aGAMq5im6Y5zq/view?usp=sharing" target=_blank>SZE
+          - Deák Kristóf: Feszítőfa-protokoll (STP)</a></p>
+
+      <h3>Peter P - STP elmélet</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y_hmBWsXguQ?si=W8m9tDlsGlfndG42"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>Peter P - STP gyakorlat</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kFqVPayu8LQ?si=TF4ZQLeU7Q2tkG8A"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>Bordé Sándor - Spanning Tree Protocol</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jgs1zeGT_fY"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe></p>
+
+      <h3>PowerCert - Spanning Tree Protocol</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qEDfDoCMsw4?si=6-bN6HK-gp3Ue0zD"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>CertBros - Spanning Tree Protocol explained</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/japdEY1UKe4"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe></p>
+
+
+
+      <h1 id="ech">EtherChannel</h1>
+      <p><a href="https://drive.google.com/file/d/139M8g30CvtUtdyqiNKX8p-EOUBRlY4hP/view?usp=sharing"
+          target=_blank>Ethernet hálózatok redundanciája</a></p>
+      <p><a href="https://drive.google.com/file/d/1MA1ckLbYEz98rGB3XPdknu4vBef-pMLK/view?usp=sharing"
+          target=_blank>Configuring EtherChannel</a></p>
+      <p><a href="https://drive.google.com/file/d/1ILfr6afe17GJwGS4v9yRuiqTrR4I3o43/view?usp=sharing"
+          target=_blank>Building a switched network with redundant links</a></p>
+      <p><a href="https://drive.google.com/file/d/1MCGQsBecaLxLeG95Skrid_vStt3U9u5w/view?usp=sharing"
+          target=_blank>Configuring EtherChannel</a></p>
+
+      <h3>Peter P - EtherChannel elmélet</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5IKoL_2UKFQ?si=HopqudsHaxMrspD0"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>Peter P - EtherChannel gyakorlat</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IRip9ziC1mo?si=4BVZmqbGeuS6pSAv"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>CertBros - EtherChannel explained</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/j6-kadxwIFQ"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe></p>
+    </section>
+  </main>
+  <footer>
+    <p>Csak az önálló tanulás bír tartós értékkel. &#x2022; <a
+        href="https://www.demokratikusneveles.hu/blog/gatto-miert-nem-oktatnak/" target="_blank">John Taylor Gatto</a>
+    </p>
+    <img src="../../static/cc.logo.large.png" alt="cc">
+  </footer>
+</body>
+
 </html>
