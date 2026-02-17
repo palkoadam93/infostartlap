@@ -97,6 +97,7 @@
 
 
       <h1 id="ios">Switch IOS</h1>
+
       <p><a href="https://drive.google.com/file/d/1RDFqA8r289rBIu-9EOBU0PRLJvN9_yc6/view?usp=drive_link"
           target="_blank">Rendszergazda 12. Switch</a></p>
 
@@ -114,7 +115,154 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-      <h2>Legfontosabb alapkonfigurációs feladatok</h2>
+      <h2>1. A parancssoros konfiguráció lehetőségei</h2>
+
+      <p>A kapcsoló egy olyan eszköz, amely az egyik portján beérkező üzenetfolyamot egy másik portjára irányítja a
+        célszámítógép MAC-címe alapján. A kapcsoló nem képes a két különböző helyi hálózat között zajló forgalom
+        irányítására. A kapcsoló az OSI-modell második rétegében működik. A második réteg az adatkapcsolati réteg. A
+        Cisco kapcsolók Ip alapú felügyeleti szoftverrel vagy telnet-kapcsolaton keresztül történő kezeléséhez egy
+        felügyeleti IP cím beállítása szükséges. Amennyiben a kapcsoló nem rendelkezik IP-címmel, a konfigurációs
+        feladatok végrehajtásához közvetlenül a konzolportjára kell csatlakozni, és terminálemulációs programot kell
+        használni. Az állomásnév és a jelszavak beállítása ugyanazokkal a parancsokkal történik, mint az ISR esetében. A
+        Cisco kapcsolók IP-alapú felügyeleti szoftverrel vagy telnet-kapcsolaton keresztül történő kezeléséhez állítsunk
+        be egy felügyeleti IP-címet! Ahhoz, hogy egy IP-cím a kapcsolóhoz társítható legyen, a címet egy virtuális helyi
+        hálózati (VLAN) interfészhez kell rendelnünk. A VLAN lehetővé teszi egynél több fizikai port egyetlen logikai
+        csoportként történő kezelését. A kapcsolón egy VLAN van előre konfigurálva, a felügyeleti feladatokat ellátó
+        VLAN1. A VLAN1 felügyeleti interfészéhez tartozó IP-cím beállításához lépjünk be a globális konfigurációs módba!
+      </p>
+
+      <h2>VLAN1 menedzsment IP beállítása</h2>
+
+      <h2>Kapcsoló alap IP konfigurálása (VLAN1)</h2>
+
+      <p class="section-title">Belépés privilegizált és globális konfigurációs módba</p>
+      <div class="terminal">
+        <span class="prompt">Switch&gt;</span> enable
+        <span class="prompt">Switch#</span> configure terminal
+      </div>
+
+      <p class="section-title">VLAN1 interfész konfigurálása</p>
+      <p>Lépjünk be a VLAN1 interfész konfigurációs módjába, majd adjuk meg a felügyeleti IP-címet.</p>
+
+      <div class="terminal">
+        <span class="config">Switch(config)#</span> interface vlan 1
+        <span class="config">Switch(config-if)#</span> ip address 192.168.1.2 255.255.255.0
+        <span class="config">Switch(config-if)#</span> exit
+        <span class="config">Switch(config)#</span> ip default-gateway 192.168.1.1
+        <span class="config">Switch(config)#</span> end
+      </div>
+
+      <p class="section-title">Konfiguráció mentése</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> copy running-config startup-config
+      </div>
+
+      <p class="note">
+        Az IP-címnek érvényesnek kell lennie a helyi hálózatban.
+        A default gateway a közvetlenül csatlakoztatott router interfészének címe.
+      </p>
+
+      <h2>Kapcsoló összekötése a forgalomirányítóval</h2>
+
+      <p>Használjunk egyenes kötésű kábelt. A LED-ek jelzik a fizikai kapcsolatot.</p>
+
+      <p class="section-title">IP-beállítások ellenőrzése</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> show running-config
+      </div>
+
+      <p class="section-title">Kapcsolat tesztelése</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> ping 192.168.1.1
+      </div>
+
+      <p>
+        Ezután a routerről pingeljük meg a kapcsoló VLAN1 IP-címét.
+        Ha nem sikeres, ellenőrizzük a kábelezést és az IP-beállításokat.
+      </p>
+
+      <h2>Portbiztonság (Port Security)</h2>
+
+      <p class="section-title">Statikus MAC-cím megadása</p>
+      <div class="terminal">
+        <span class="prompt">S1#</span> configure terminal
+        <span class="config">S1(config)#</span> interface fastEthernet 0/18
+        <span class="config">S1(config-if)#</span> switchport mode access
+        <span class="config">S1(config-if)#</span> switchport port-security mac-address 0001.0002.0003
+      </div>
+
+      <p class="section-title">Dinamikus MAC tanulás</p>
+      <div class="terminal">
+        <span class="prompt">S1#</span> configure terminal
+        <span class="config">S1(config)#</span> interface fastEthernet 0/18
+        <span class="config">S1(config-if)#</span> switchport mode access
+        <span class="config">S1(config-if)#</span> switchport port-security
+        <span class="config">S1(config-if)#</span> end
+      </div>
+      <p class="note"> A dinamikusan tanult MAC-címek újraindítás után elvesznek. Alapértelmezett maximum: 1 MAC-cím /
+        port. </p>
+
+      <p class="section-title">Sticky MAC tanulás</p>
+      <div class="terminal">
+        <span class="prompt">S1#</span> configure terminal
+        <span class="config">S1(config)#</span> interface fastEthernet 0/18
+        <span class="config">S1(config-if)#</span> switchport mode access
+        <span class="config">S1(config-if)#</span> switchport port-security
+        <span class="config">S1(config-if)#</span> switchport port-security maximum 50
+        <span class="config">S1(config-if)#</span> switchport port-security mac-address sticky
+        <span class="config">S1(config-if)#</span> end
+      </div>
+
+      <p class="note"> Sticky módban a megtanult címek bekerülnek az aktív konfigurációba. Biztonságsértés esetén a port
+        alapértelmezetten shutdown állapotba kerül. </p>
+
+      <h2>Fontos show parancsok</h2>
+
+      <p class="section-title">Általános információk</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> show running-config
+        <span class="prompt">Switch#</span> show startup-config
+        <span class="prompt">Switch#</span> show version
+      </div>
+
+      <p class="section-title">Interfész és port információk</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> show interfaces fastEthernet 0/1
+        <span class="prompt">Switch#</span> show ip interface brief
+        <span class="prompt">Switch#</span> show port-security
+        <span class="prompt">Switch#</span> show mac-address-table
+      </div>
+
+      <p class="section-title">Kapcsolatok ellenőrzése</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> show cdp neighbors detail
+        <span class="prompt">Switch#</span> show sessions
+        <span class="prompt">Switch#</span> show ssh
+        <span class="prompt">Switch#</span> ping 192.168.1.1
+        <span class="prompt">Switch#</span> traceroute 192.168.1.1
+      </div>
+
+      <h2>Üzemmódok és súgó használata</h2>
+
+      <p class="section-title">Üzemmódváltás</p>
+      <div class="terminal">
+        <span class="prompt">Switch></span> enable
+        <span class="prompt">Switch#</span> disable
+        <span class="prompt">Switch#</span> configure terminal
+        <span class="config">Switch(config)#</span> exit
+        <span class="config">Switch(config)#</span> end
+      </div>
+
+      <p class="section-title">Súgó</p>
+      <div class="terminal">
+        <span class="prompt">Switch#</span> ?
+        <span class="prompt">Switch#</span> show ?
+        <span class="prompt">Switch#</span> sh?
+      </div>
+
+
+
+      <h2>2. Legfontosabb alapkonfigurációs feladatok</h2>
 
       <p class="section-title">Alapbeállítások</p>
       <div class="terminal">
