@@ -164,26 +164,26 @@
 
       <h2>Kapcsoló összekötése a forgalomirányítóval</h2>
 
-      <p>Használjunk egyenes kötésű kábelt. A LED-ek jelzik a fizikai kapcsolatot.</p>
+      <p>A kapcsoló forgalomirányítóval történő összekötéséhez használjunk egyenes kötésű kábelt! A sikeres összeköttetést a két eszközön látható LED-ek jelzik. Először ellenőrizzük az IP-beállításokat! A show running-configuration parancs segítségével ellenőrizzük, hogy a kapcsoló VLAN1 felügyeleti portjához tartozó IP-cím és a közvetlenül csatlakoztatott forgalomirányító interfészéhez tartozó IP-cím egyazon helyi hálózaton szerepel-e!</p>
 
       <p class="section-title">IP-beállítások ellenőrzése</p>
       <div class="terminal">
         <span class="prompt">Switch#</span> show running-config
       </div>
 
-      <p class="section-title">Kapcsolat tesztelése</p>
+      <p class="section-title">Ezután teszteljük az összeköttetést a ping parancs használatával! A kapcsolóról pingeljük meg a közvetlenül csatlakoztatott forgalomirányító interfészéhez tartozó IP-címet!</p>
       <div class="terminal">
         <span class="prompt">Switch#</span> ping 192.168.1.1
       </div>
 
       <p>
-        Ezután a routerről pingeljük meg a kapcsoló VLAN1 IP-címét.
-        Ha nem sikeres, ellenőrizzük a kábelezést és az IP-beállításokat.
+        Ezután a forgalomirányítóról pingeljük meg a kapcsoló VLAN1 felügyeleti interfészéhez tartozó IP-címet! Ha a pingelés nem jár sikerrel, akkor ellenőrizzük újra az összeköttetést és a beállításokat.
       </p>
 
       <h2>Portbiztonság (Port Security)</h2>
+      <p>A kapcsoló portjai belépési pontként szolgálhatnak a hálózatba az illetéktelen felhasználók számára. Ennek megakadályozásához a kapcsolók a portbiztonság elnevezésű megoldást alkalmazzák. A portbiztonság portonként korlátozza az engedélyezett, érvényes MAC-címek számát. Az egyes portok nem továbbítják azokat a csomagokat, amelyeknél a forrás MAC-címe nincs az engedélyezett címek csoportjában.</p>
 
-      <p class="section-title">Statikus MAC-cím megadása</p>
+      <p class="section-title">Statikus MAC-cím megadása - A MAC-címek megadása manuálisan történik. A statikus MAC-címeket a címtábla és az aktív konfiguráció is tárolja.</p>
       <div class="terminal">
         <span class="prompt">S1#</span> configure terminal
         <span class="config">S1(config)#</span> interface fastEthernet 0/18
@@ -191,7 +191,7 @@
         <span class="config">S1(config-if)#</span> switchport port-security mac-address 0001.0002.0003
       </div>
 
-      <p class="section-title">Dinamikus MAC tanulás</p>
+      <p class="section-title">Dinamikus MAC tanulás - A MAC-címek megtanulása dinamikusan történik, a megtanult címeket a címtábla tárolja. A megtanulható címek száma szabályozható, alapértelmezés szerint portonként legfeljebb egy. A megtanult címek a port lekapcsolása vagy a kapcsoló újraindítása esetén elvesznek.</p>
       <div class="terminal">
         <span class="prompt">S1#</span> configure terminal
         <span class="config">S1(config)#</span> interface fastEthernet 0/18
@@ -202,7 +202,11 @@
       <p class="note"> A dinamikusan tanult MAC-címek újraindítás után elvesznek. Alapértelmezett maximum: 1 MAC-cím /
         port. </p>
 
-      <p class="section-title">Sticky MAC tanulás</p>
+      <p class="section-title">Sticky MAC tanulás - A dinamikusra hasonlító megoldás, amelyben a címeket az aktív konfiguráció is tárolja. A portbiztonság alapértelmezés szerint nincs engedélyezve. A portbiztonság engedélyezését követően a biztonság megsértése a port leállítását eredményezi. Ha például a dinamikus portbiztonság van engedélyezve, és az engedélyezett MAC-címek maximális száma portonként egy, akkor az első megtanult cím lesz a biztonságos cím. Amennyiben egy másik számítógép eltérő MACcímmel próbál csatlakozni a porthoz, az a biztonság megsértésének minősül. Az alábbi esetek bármelyikének bekövetkezése a biztonság megsértésének minősül:</p>
+      <ul>
+        <li>A címtáblában szereplő címek száma elérte a biztonságos MAC-címek maximális számát, és egy - a címtáblában nem szereplő MAC-címmel rendelkező - eszköz próbál csatlakozni az interfészhez.</li>
+        <li>A VLAN egyik biztonságos interfészén megtanult vagy beállított cím ugyanazon VLAN egy másik biztonságos interfészén látszik.</li>
+      </ul>
       <div class="terminal">
         <span class="prompt">S1#</span> configure terminal
         <span class="config">S1(config)#</span> interface fastEthernet 0/18
