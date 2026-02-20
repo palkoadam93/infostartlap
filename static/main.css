@@ -61,6 +61,12 @@ header h1 {
 
 /* =================================== FŐMENÜ ================================== */
 
+aside {
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* fontos flex esetén */
+}
+
 main {
     /*background-color: rgba(26,26,29,.8);*/
     /*color: white;*/
