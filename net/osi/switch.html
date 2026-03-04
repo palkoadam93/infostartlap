@@ -9,6 +9,7 @@
   <title>Az OSI-modell alsó rétegei</title>
   <link rel="stylesheet" href="../../static/main.css">
   <link rel="stylesheet" href="terminal2.css">
+  <link rel="stylesheet" href="panel.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,11 +45,151 @@
     <section>
       <p>Tartalom</p>
       <ul id="t">
+        <li><a href="#ptt1">Kapcsolás Ethernet hálózatokon, a kapcsoló alapszintű beállítása</a></li>
+        <li><a href="#ptt2">Kapcsolási alapok</a></li>
         <li><a href="#switch">Switch (kapcsoló)</a></li>
         <li><a href="#ios">Switch IOS</a></li>
+        <li><a href="#l2red">Második rétegbeli redundancia</a></li>
         <li><a href="#stp">Spanning Tree</a></li>
         <li><a href="#ech">EtherChannel</a></li>
+        <li><a href="#bizt">Hálózatbiztonság, a kapcsoló biztonságossá tétele</a></li>
       </ul>
+
+      <h1 id="ptt1">Kapcsolás Ethernet hálózatokon, a kapcsoló alapszintű beállítása (7+13 óra)</h1>
+
+        <p>A témakör feldolgozásával a tanulók megismerik az adatbeágyazás menetét, az Ethernet-technológia jellemzőit és a kapcsolók működési elvét. Cél, hogy elsajátítsák legalább egy terminálemulációs szoftver használatát, és elvégezzék a második rétegbeli kapcsoló alapkonfigurációját. A témakör elsajátítását követően a tanuló:</p>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van az adatbeágyazás fogalmával, működésével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes az adatbeágyazás vizsgálatára adatforgalom elfogására alkalmas szoftver segítségével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri az Ethernet-technológia jellemzőit, működési elvét, tisztában van az Ethernet-keret felépítésével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes az Ethernet-keret fejlécelemeinek azonosítására, elfogott keret esetén adatforgalom elfogására alkalmas szoftverrel.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a MAC-cím jelentőségével, szerepével, felépítésével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes a végberendezés hálózatikártya-információinak megjelenítésére, MACcímének lekérdezése.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a félduplex és a teljes duplex kommunikáció működésével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a kapcsoló felépítését, képes felismerni a kapcsoló összetevőit.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a kapcsoló feladatával, jelentőségével, működési elvével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a MAC-tábla fogalmát, szerepét. Tudja, hogyan kerülnek a bejegyzések a kapcsoló MAC-táblájába.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a kapcsoló továbbítási módjait, tisztában van az elárasztásos továbbítás fogalmával, működésével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Érti a MAC-táblában található bejegyzéseket, a MAC-tábla tartalma alapján képes eldönteni, hogy a kapcsoló mely portjain továbbítja az adott keretet.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <h1 id="ptt2">Kapcsolási alapok (3+7 óra)</h1>
+
+        <p>A témakör célja, hogy a tanulók megismerjék a kapcsoló működését, a kapcsolási módokat. A témakör elvégzését követően a tanuló az alábbi ismeretekkel és gyakorlati készségekkel fog rendelkezni:</p>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a második rétegbeli kerettovábbítás folyamatával. Tudja, hogy a kapcsoló esetében mire szolgál a MAC-tábla. Ismeri a MAC-tábla felépítésének folyamatát, és használatának módját. Képes a kapcsoló MAC-tábláját megjeleníteni, kiüríteni.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Adatforgalom elfogására alkalmas szoftver vagy szimulációs szoftver használatával képes a kapcsoló MAC-táblájának felépítését nyomon követni.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a kapcsolási módokat (töredékmentes továbbítás, gyorstovábbítás, tárol-éstovábbít módszer), és képes azok összehasonlítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van az ütközési tartomány és a szórási tartomány fogalmával. Képes az ütközési és a szórási tartomány összehasonlítására és megkülönböztetésére. Adott topológián képes az ütközési és a szórási tartományok megállapítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
 
       <h1 id="#switch">Switch (kapcsoló)</h1>
 
@@ -397,7 +538,169 @@
       </p>
 
 
+<h1 id="l2red">Második rétegbeli redundancia (7+15 óra)</h1>
 
+        <p>A témakör célja, hogy a tanulók felismerjék az első és második rétegben a redundancia szükségességét, és tisztában legyenek a redundancia okozta problémákkal. Ismerjék meg a feszítőfa-protokoll szerepét, és legyenek képesek feszítőfa-protokoll használatára, konfigurálására. A tanulók értsék meg a portösszevonás működését, és legyenek képesek kapcsolók közötti portösszevonás konfigurálására, hibaelhárítására. A témakör elvégzését követően a tanuló az alábbi ismeretekkel és gyakorlati készségekkel fog rendelkezni:</p>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van az első és második rétegbeli LAN-redundancia szerepével, szükségességével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Érti a redundánsan kialakított hálózatok esetén felmerülő problémákat (szórási vihar, MAC-tábla-instabilitás, többszörös kerettovábbítás).</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes a redundánsan kialakított hálózat problémáit szimulációs szoftver segítségével bemutatni, modellezni.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a feszítőfa-protokollt, tisztában van annak szerepével, feladatával.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a feszítőfa-protokoll működését, tudja az idekapcsolódó fogalmakat (gyökérponti híd, Bridge ID, BPDU, gyökérponti port, kijelölt port, nem kijelölt port).</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a Bridge ID tartalmát, felépítését.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a gyökérponti híd választásának folyamatával, és képes azt befolyásolni prioritás használatával.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a feszítőfa-protokoll által használt vonali költségeket. Képes egy topológián megállapítani, hogy melyik kapcsoló tölti be a gyökérponti híd szerepét, a többi kapcsoló esetén képes a gyökérponti hídtól való költség megállapítására. Képes eldönteni, hogy melyik port milyen szerepet tölt be (gyökérponti, kijelölt, nem kijelölt).</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes megjeleníteni egy kapcsolón a jelenleg használt feszítőfa-protokollt, a györkérponti híd és a saját Bridge ID-t, a gyökérponti hídtól vett költséget és a feszítőfa-protokollban részt vevő portok szerepét és költségét.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tudja, hogy egy port felkapcsolása esetén milyen állapotváltozások (lezárt, figyelő, tanuló, továbbító, letiltott) mennek végbe, és képes ezeket jellemezni.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a feszítőfa-protokoll változatait (STP, RSTP, PVST+, rapid PVST+, MSTP), érti a működésbeli eltéréseket.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a portfast, a BPDU-filter és a BPDU-guard szerepével, és képes ezeket beállítani globálisan és portonként is.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes a feszítőfa-protokoll hibakeresésére és hibaelhárítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a második rétegbeli portösszevonás szükségességével, és ismeri annak lehetőségeit.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a portösszevonás előnyeit, a feszítőfa-protokollra vonatkozó jelentőségét.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tudja, mi szükséges ahhoz, hogy a portösszevonás működőképesen megvalósuljon.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismer legalább egy protokollt, amely portösszevonást valósít meg (LACP, PAgP), tisztában van ezen protokoll működésével és a használt portmódokkal (kezdeményező, várakozó).</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes az általa ismert protokollal EtherChannel kapcsolat kialakítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes egy kapcsolón létrehozott EtherChannel kapcsolatok megjelenítésére, a beletartozó portok kilistázására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes EtherChannel kapcsolatok hibakeresésére és hibaelhárítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
 
       <h1 id="stp">Spanning Tree</h1>
       <p><a href="https://drive.google.com/file/d/1CjXFIr1b5Z46pkRdcA5aGAMq5im6Y5zq/view?usp=sharing" target=_blank>SZE
@@ -462,6 +765,116 @@
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe></p>
+
+
+          <h1 id="bizt">Hálózatbiztonság, a kapcsoló biztonságossá tétele (10+27 óra)</h1>
+
+        <p>A témakör célja, hogy a tanulók megismerjék a leggyakoribb biztonsági problémákat és támadási típusokat LAN-környezetben, és megtanulják, hogyan lehet ellenük védekezni, illetve megelőzni őket.</p>
+        <p>A témakör elvégzését követően a tanuló az alábbi ismeretekkel és gyakorlati készségekkel fog rendelkezni:</p>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Érti az alapvető biztonsági beállítások szükségességét a hálózati eszközökön.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a LAN-okban előforduló leggyakoribb biztonsági problémákat, támadási lehetőségeket (MAC-cím-elárasztás, ARP-támadás, DHCP-kiéheztetés és -hamisítás, Telnet-támadások, Brute force-jelszó-támadás).</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a leggyakrabban használt biztonsági módszerek szerepével, működési elvével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Érti a MAC-cím-elárasztásos támadás folyamatát és az általa okozott működési problémákat.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a portbiztonság működésével, és használatának lehetőségeivel. Érti a portbiztonság megsértésével kiváltott állapotok közti különbségeket.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes kapcsolón portbiztonság konfigurálására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes ellenőrizni a portbiztonsággal konfigurált kapcsolóportok állapotát, és képes a lekapcsolt portok helyreállítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a DHCP-snooping-technikát, annak működését. Tisztában van a megbízható és nem megbízható port fogalmával.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes kapcsolón DHCP-snooping konfigurálására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tudja, mi célt szolgál a DHCP 82-es opciója, és képes ennek használatát engedélyezni, illetve tiltani.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes ARP-inspection (DAI)konfigurálásra az ARP-támadások megelőzésére.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes kapcsoló és forgalomirányító távoli elérését SSH-protokoll használatával biztosítani.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes az SSH-elérés során fellépő hibák felismerésére és elhárítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
     </section>
   </main>
   <footer>
@@ -470,6 +883,8 @@
     </p>
     <img src="../../static/cc.logo.large.png" alt="cc">
   </footer>
+
+  <script src="panel.js"></script>
 </body>
 
 </html>
