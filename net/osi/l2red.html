@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="../../static/Palkotikumicon.png">
+
+  <title>Az OSI-modell alsó rétegei</title>
+  <link rel="stylesheet" href="../../static/main.css">
+  <link rel="stylesheet" href="terminal2.css">
+  <link rel="stylesheet" href="panel.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="network">Az OSI-modell alsó rétegei</h1>
+  </header>
+
+  <main>
+    <aside>
+      <p><a href="../../beginnet.html">Vissza</a></p>
+      <nav>
+        <ul>
+          <li><a href="fizikai.html">Fizikai réteg</a></li>
+          <li><a href="adatkapcs.html">Adatkapcsolati réteg</a></li>
+          <li><a href="kabelek.html">Kábelek</a></li>
+          <li><a href="switch.html">Switch (kapcsoló)</a></li>
+          <li><a href="#" id="aktiv">Redundancia</a></li>
+          <li><a href="wireless.html">Vezeték nélküli</a></li>
+          <li><a href="IPv4.html">IPv4</a></li>
+          <li><a href="IPv6.html">IPv6</a></li>
+          <li><a href="halozatok.html">Hálózatok kategóriái</a></li>
+          <li><a href="szall.html">Szállítási réteg</a></li>
+          <li><a href="komm.html">Kommunikáció</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section>
+        <p>Tartalom</p>
+        <ul id="t">
+            <li><a href="#l2red">Második rétegbeli redundancia</a></li>
+            <li><a href="#stp">Spanning Tree</a></li>
+            <li><a href="#ech">EtherChannel</a></li>
+        </ul>
+
+        <h1 id="l2red">Második rétegbeli redundancia (7+15 óra)</h1>
+
+        <p>A témakör célja, hogy a tanulók felismerjék az első és második rétegben a redundancia szükségességét, és tisztában legyenek a redundancia okozta problémákkal. Ismerjék meg a feszítőfa-protokoll szerepét, és legyenek képesek feszítőfa-protokoll használatára, konfigurálására. A tanulók értsék meg a portösszevonás működését, és legyenek képesek kapcsolók közötti portösszevonás konfigurálására, hibaelhárítására. A témakör elvégzését követően a tanuló az alábbi ismeretekkel és gyakorlati készségekkel fog rendelkezni:</p>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van az első és második rétegbeli LAN-redundancia szerepével, szükségességével.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Érti a redundánsan kialakított hálózatok esetén felmerülő problémákat (szórási vihar, MAC-tábla-instabilitás, többszörös kerettovábbítás).</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes a redundánsan kialakított hálózat problémáit szimulációs szoftver segítségével bemutatni, modellezni.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a feszítőfa-protokollt, tisztában van annak szerepével, feladatával.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a feszítőfa-protokoll működését, tudja az idekapcsolódó fogalmakat (gyökérponti híd, Bridge ID, BPDU, gyökérponti port, kijelölt port, nem kijelölt port).</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a Bridge ID tartalmát, felépítését.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a gyökérponti híd választásának folyamatával, és képes azt befolyásolni prioritás használatával.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a feszítőfa-protokoll által használt vonali költségeket. Képes egy topológián megállapítani, hogy melyik kapcsoló tölti be a gyökérponti híd szerepét, a többi kapcsoló esetén képes a gyökérponti hídtól való költség megállapítására. Képes eldönteni, hogy melyik port milyen szerepet tölt be (gyökérponti, kijelölt, nem kijelölt).</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes megjeleníteni egy kapcsolón a jelenleg használt feszítőfa-protokollt, a györkérponti híd és a saját Bridge ID-t, a gyökérponti hídtól vett költséget és a feszítőfa-protokollban részt vevő portok szerepét és költségét.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tudja, hogy egy port felkapcsolása esetén milyen állapotváltozások (lezárt, figyelő, tanuló, továbbító, letiltott) mennek végbe, és képes ezeket jellemezni.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a feszítőfa-protokoll változatait (STP, RSTP, PVST+, rapid PVST+, MSTP), érti a működésbeli eltéréseket.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a portfast, a BPDU-filter és a BPDU-guard szerepével, és képes ezeket beállítani globálisan és portonként is.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes a feszítőfa-protokoll hibakeresésére és hibaelhárítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tisztában van a második rétegbeli portösszevonás szükségességével, és ismeri annak lehetőségeit.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismeri a portösszevonás előnyeit, a feszítőfa-protokollra vonatkozó jelentőségét.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Tudja, mi szükséges ahhoz, hogy a portösszevonás működőképesen megvalósuljon.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Ismer legalább egy protokollt, amely portösszevonást valósít meg (LACP, PAgP), tisztában van ezen protokoll működésével és a használt portmódokkal (kezdeményező, várakozó).</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes az általa ismert protokollal EtherChannel kapcsolat kialakítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes egy kapcsolón létrehozott EtherChannel kapcsolatok megjelenítésére, a beletartozó portok kilistázására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Képes EtherChannel kapcsolatok hibakeresésére és hibaelhárítására.</button>
+          <div class="dropdown-content">
+            <p>Ez az első panel tartalma.</p>
+            <p>További szöveg itt.</p>
+          </div>
+        </div>
+
+      <h1 id="stp">Spanning Tree</h1>
+      <p><a href="https://drive.google.com/file/d/1CjXFIr1b5Z46pkRdcA5aGAMq5im6Y5zq/view?usp=sharing" target=_blank>SZE
+          - Deák Kristóf: Feszítőfa-protokoll (STP)</a></p>
+
+      <h3>Peter P - STP elmélet</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y_hmBWsXguQ?si=W8m9tDlsGlfndG42"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>Peter P - STP gyakorlat</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kFqVPayu8LQ?si=TF4ZQLeU7Q2tkG8A"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>Bordé Sándor - Spanning Tree Protocol</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jgs1zeGT_fY"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe></p>
+
+      <h3>PowerCert - Spanning Tree Protocol</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qEDfDoCMsw4?si=6-bN6HK-gp3Ue0zD"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>CertBros - Spanning Tree Protocol explained</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/japdEY1UKe4"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe></p>
+
+
+
+      <h1 id="ech">EtherChannel</h1>
+      <p><a href="https://drive.google.com/file/d/139M8g30CvtUtdyqiNKX8p-EOUBRlY4hP/view?usp=sharing"
+          target=_blank>Ethernet hálózatok redundanciája</a></p>
+      <p><a href="https://drive.google.com/file/d/1MA1ckLbYEz98rGB3XPdknu4vBef-pMLK/view?usp=sharing"
+          target=_blank>Configuring EtherChannel</a></p>
+      <p><a href="https://drive.google.com/file/d/1ILfr6afe17GJwGS4v9yRuiqTrR4I3o43/view?usp=sharing"
+          target=_blank>Building a switched network with redundant links</a></p>
+      <p><a href="https://drive.google.com/file/d/1MCGQsBecaLxLeG95Skrid_vStt3U9u5w/view?usp=sharing"
+          target=_blank>Configuring EtherChannel</a></p>
+
+      <h3>Peter P - EtherChannel elmélet</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5IKoL_2UKFQ?si=HopqudsHaxMrspD0"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>Peter P - EtherChannel gyakorlat</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IRip9ziC1mo?si=4BVZmqbGeuS6pSAv"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+      <h3>CertBros - EtherChannel explained</h3>
+      <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/j6-kadxwIFQ"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe></p>
+    </section>
+  </main>
+  <footer>
+    <p>Csak az önálló tanulás bír tartós értékkel. &#x2022; <a
+        href="https://www.demokratikusneveles.hu/blog/gatto-miert-nem-oktatnak/" target="_blank">John Taylor Gatto</a>
+    </p>
+    <img src="../../static/cc.logo.large.png" alt="cc">
+  </footer>
+
+  <script src="panel.js"></script>
+</body>
+
+</html>
