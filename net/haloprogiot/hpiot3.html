@@ -66,6 +66,125 @@
             <p>További szöveg itt.</p>
           </div>
         </div>
+
+        <h3>buildwithpython - Python Network Programming - TCP/IP Socket Programming</h3>
+        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=8vvWFSdnGZdxD9W9&amp;list=PLhTjy8cBISErYuLZUvVOYsR1giva2payF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+        <h3>Tech With Tim - Python Socket Programming Tutorial</h3>
+        <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3QiPPX-KeSc?si=GmIeYQidosVLNjTh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+  <h1>Miért fontos a hálózatok programozása?</h1>
+
+  <p>
+    A modern hálózatokban egyre fontosabb, hogy a hálózati eszközöket ne csak
+    kézzel lehessen konfigurálni, hanem programok segítségével is. Ezt nevezzük
+    hálózati automatizálásnak (Network Automation).
+  </p>
+
+  <h3>1. Régen minden kézzel történt</h3>
+  <p>
+    A hálózati rendszergazdák egyenként léptek be a routerekbe és switchekbe,
+    majd parancsokkal konfigurálták azokat.
+  </p>
+
+  <pre><code>
+ssh router1
+configure terminal
+interface g0/1
+ip address 192.168.1.1
+  </code></pre>
+
+  <p>
+    Ha csak néhány eszköz volt, ez még kezelhető volt. Nagy hálózatoknál azonban
+    akár több száz vagy több ezer eszközt kell konfigurálni, ami kézzel már
+    nagyon időigényes.
+  </p>
+
+  <h3>2. Software Defined Networking (SDN)</h3>
+  <p>
+    A Software Defined Networking (SDN) egy olyan megközelítés, amely lehetővé
+    teszi, hogy a hálózatot központilag, szoftver segítségével irányítsák.
+  </p>
+
+  <p>
+    Ilyenkor nem egy ember konfigurál minden eszközt külön-külön, hanem egy
+    program végzi el a konfigurációt egyszerre több eszközön.
+  </p>
+
+  <p>Például egy Python program:</p>
+  <ul>
+    <li>konfigurálhat több tucat switchet</li>
+    <li>létrehozhat VLAN-okat</li>
+    <li>módosíthat IP-címeket</li>
+    <li>beállíthat útvonalakat</li>
+  </ul>
+
+  <h3>3. Nagy gyártók támogatása</h3>
+  <p>
+    A modern hálózati eszközök gyártói is támogatják az automatizálást. Ilyen
+    például a Cisco, a Juniper vagy az Arista hálózati rendszerei.
+  </p>
+
+  <p>
+    Ezek az eszközök már API-kon keresztül is konfigurálhatók, így programokból
+    lehet őket vezérelni.
+  </p>
+
+  <h3>4. YANG adatmodell</h3>
+  <p>
+    A YANG egy adatmodellező nyelv, amely leírja a hálózati eszközök
+    konfigurációjának szerkezetét. Segítségével a program pontosan tudja,
+    milyen adatokat lehet beállítani egy eszközön.
+  </p>
+
+  <h3>5. RESTCONF és NETCONF protokollok</h3>
+  <p>
+    A RESTCONF és a NETCONF olyan hálózati protokollok, amelyek lehetővé teszik,
+    hogy programok kommunikáljanak a hálózati eszközökkel.
+  </p>
+
+  <p>A működés egyszerűen így néz ki:</p>
+
+  <pre><code>
+Python program
+      ↓
+RESTCONF / NETCONF
+      ↓
+Router vagy Switch
+      ↓
+Konfiguráció módosítása
+  </code></pre>
+
+  <h3>6. Network Automation</h3>
+  <p>
+    A hálózatok automatizált kezelését Network Automationnek nevezik. Ez a
+    megközelítés hasonló ahhoz, ahogyan a felhőszolgáltatások (cloud rendszerek)
+    is működnek.
+  </p>
+
+  <p>
+    Ahelyett, hogy mindent kézzel állítanánk be, a teljes infrastruktúrát
+    programkóddal lehet létrehozni és konfigurálni.
+  </p>
+
+  <h3>7. Miért Python?</h3>
+  <p>
+    A Python az egyik legnépszerűbb nyelv a hálózati automatizálás területén,
+    mert könnyen tanulható, és sok hálózati eszközhöz léteznek hozzá
+    könyvtárak.
+  </p>
+
+  <p>
+    Segítségével akár néhány sor kóddal is automatizálható egy teljes hálózat
+    konfigurálása.
+  </p>
+
+  <h3>Összefoglalás</h3>
+  <p>
+    A hálózatok programozása lehetővé teszi, hogy a hálózati eszközöket
+    programok segítségével konfiguráljuk és irányítsuk. Ez gyorsabbá,
+    megbízhatóbbá és hatékonyabbá teszi a nagy hálózatok kezelését.
+  </p>
       </section>
     </main>
     <footer>
