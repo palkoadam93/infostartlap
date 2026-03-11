@@ -8,7 +8,7 @@
 
   <title>Az OSI-modell alsó rétegei</title>
   <link rel="stylesheet" href="../../static/main.css">
-  <link rel="stylesheet" href="terminal2.css">
+  <link rel="stylesheet" href="../terminal2.css">
   <link rel="stylesheet" href="panel.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -473,75 +473,7 @@
         <span class="config">Switch(config)#</span> ip host alfa 10.0.0.1
       </div>
 
-      <p class="section-title">VLAN konfiguráció</p>
-      <div class="terminal">
-        <span class="config">Switch(config)#</span> vlan 25
-        <span class="config">Switch(config-vlan)#</span> name gamma
-        <span class="config">Switch(config)#</span> int range fa0/10 - 15
-        <span class="config">Switch(config-if-range)#</span> switchport mode access
-        <span class="config">Switch(config-if-range)#</span> switchport access vlan 25
-      </div>
-
-      <p class="section-title">Trönkport beállítás</p>
-      <div class="terminal">
-        <span class="config">Switch(config)#</span> int fa0/24
-        <span class="config">Switch(config-if)#</span> switchport mode trunk
-        <span class="config">Switch(config-if)#</span> switchport trunk native vlan 99
-        <span class="config">Switch(config-if)#</span> switchport trunk allowed vlan all
-        <span class="prompt">Switch#</span> show interfaces trunk
-      </div>
-
-      <p class="section-title">Spanning Tree Protocol (STP)</p>
-      <div class="terminal">
-        <span class="prompt">Switch#</span> show spanning-tree summary
-        <span class="config">Switch(config)#</span> spanning-tree mode rapid-pvst
-        <span class="config">Switch(config)#</span> spanning-tree vlan 1 priority 4096
-        <span class="config">Switch(config)#</span> spanning-tree portfast default
-        <span class="config">Switch(config-if)#</span> spanning-tree bpduguard enable
-      </div>
-
-
-      <h2>VTP (VLAN Trunking Protocol) konfiguráció</h2>
-
-      <p class="section-title">VTP – Első módszer (vlan database)</p>
-      <div class="terminal">
-        <span class="prompt">Switch#</span> vlan database
-        <span class="config">Switch(vlan)#</span> vtp domain tartomanynev
-        <span class="config">Switch(vlan)#</span> vtp password jelszo
-        <span class="config">Switch(vlan)#</span> vtp v2-mode
-        <span class="config">Switch(vlan)#</span> vtp mode server
-        <span class="config">Switch(vlan)#</span> vtp mode client
-        <span class="config">Switch(vlan)#</span> vtp mode transparent
-      </div>
-
-      <p class="section-title">VTP – Második módszer (globális konfiguráció)</p>
-      <div class="terminal">
-        <span class="config">Switch(config)#</span> vtp domain tartomanynev
-        <span class="config">Switch(config)#</span> vtp password jelszo
-        <span class="config">Switch(config)#</span> vtp version 2
-        <span class="config">Switch(config)#</span> vtp mode server
-        <span class="config">Switch(config)#</span> vtp mode client
-        <span class="config">Switch(config)#</span> vtp mode transparent
-      </div>
-
-      <p class="section-title">VTP ellenőrzése</p>
-      <div class="terminal">
-        <span class="prompt">Switch#</span> show vtp status
-        <span class="prompt">Switch#</span> show vtp password
-      </div>
-
-      <p class="section-title">VTP Pruning</p>
-      <div class="terminal">
-        <span class="config">Switch(config)#</span> vtp pruning
-      </div>
-
-      <p class="note">
-        A VTP lehetővé teszi a VLAN információk automatikus szinkronizálását a trönk kapcsolatokon keresztül.
-        Server módban VLAN létrehozható és terjeszthető,
-        Client módban csak fogadja a módosításokat,
-        Transparent módban nem módosítja a VTP adatbázist, de továbbítja a VTP kereteket.
-        A pruning csökkenti a fölösleges VLAN forgalmat a trönkökön.
-      </p>
+      
 
 
 
