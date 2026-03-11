@@ -173,11 +173,128 @@
 
         <h1 id="egys">Keret, csomag, szegmens</h1>
 
+        <p>A <strong>keret → csomag → szegmens → datagram</strong> kifejezések a számítógépes hálózatok különböző <strong>OSI/TCP-IP rétegeiben használt adat-egységek</strong>. A sorrend általában <strong>lentről felfelé</strong> (fizikai továbbítás felől az alkalmazás felé) értendő.</p>
+
+        <h2>1. Keret (Frame)</h2>
+
         <ul>
-          <li>Datagram - szegmens</li>
-          <li>Csomag</li>
-          <li>Keret</li>
+          <li>A <strong>keret</strong> az <strong>adatkapcsolati réteg</strong> (2. réteg az OSI model-ben) adat-egysége.</li>
+          <li>A hálózat <strong>helyi szakaszán</strong> (pl. egy LAN-on) így továbbítják az adatot.</li>
+          <li>Tartalmaz:
+            <ul>
+              <li>forrás <strong>MAC-cím</strong></li>
+              <li>cél <strong>MAC-cím</strong></li>
+              <li>hibadetektáló mező (pl. CRC)</li>
+              <li>benne egy <strong>csomag</strong>.</li>
+            </ul>
+          </li>
         </ul>
+
+<p>Példa: egy <strong>Ethernet keret</strong>.</p>
+
+<p>👉 Egyszerűen: a <strong>helyi hálózaton mozgó „doboz”</strong>, ami az IP-csomagot viszi.</p>
+
+<h2>2. Csomag (Packet)</h2>
+
+<ul>
+<li>A <strong>csomag</strong> a <strong>hálózati réteg</strong> (3. réteg) adat-egysége.</li>
+<li>Leggyakrabban <strong>IP csomag</strong>.</li>
+<li>Tartalmaz:
+    <ul>
+        <li>forrás <strong>IP-cím</strong></li>
+        <li>cél <strong>IP-cím</strong></li>
+        <li>benne egy <strong>szegmens vagy datagram</strong>.</li>
+    </ul>
+</li>
+</ul>
+
+<p>Tipikus protokoll:</p>
+
+<ul>
+<li><strong>Internet Protocol</strong> (IP)</li>
+</ul>
+
+<p>👉 Ez az az egység, ami <strong>routereken keresztül az interneten utazik</strong>.</p>
+
+<h2>3. Szegmens (Segment)</h2>
+
+<ul>
+<li>A <strong>szegmens</strong> a <strong>szállítási réteg</strong> adat-egysége <strong>TCP használatakor</strong>.</li>
+<li>A protokoll:
+    <ul>
+        <li><strong>Transmission Control Protocol</strong> (TCP)</li>
+    </ul>
+</li>
+<li>Jellemzők:
+    <ul>
+        <li>sorszám</li>
+        <li>visszaigazolás</li>
+        <li>hibajavítás</li>
+        <li>megbízható adatátvitel.</li>
+    </ul>
+</li>
+</ul>
+
+<p>👉 Ez a <strong>megbízható kapcsolat-orientált kommunikáció</strong> adatblokkját jelenti.</p>
+
+<h2>4. Datagram</h2>
+
+<ul>
+<li>A <strong>datagram</strong> szintén a <strong>szállítási réteg</strong> adat-egysége, de <strong>UDP esetén</strong>.</li>
+<li>A protokoll:
+    <ul>
+        <li><strong>User Datagram Protocol</strong> (UDP)</li>
+    </ul>
+</li>
+<li>Jellemzők:
+    <ul>
+        <li>nincs kapcsolatfelépítés</li>
+        <li>nincs garantált kézbesítés</li>
+        <li>gyorsabb, kevesebb overhead.</li>
+    </ul>
+</li>
+</ul>
+
+<p>👉 Példák: online játékok, streaming, DNS.</p>
+
+<h3>Egymásba ágyazva (encapsulation):</h3>
+
+<pre>
+Keret
+ └─ Csomag (IP packet)
+     └─ Szegmens (TCP) / Datagram (UDP)
+         └─ Alkalmazási adat
+</pre>
+
+<p><strong>Röviden:</strong></p>
+
+<table>
+<tr>
+<th>Fogalom</th>
+<th>Réteg</th>
+<th>Példa</th>
+</tr>
+<tr>
+<td>Keret</td>
+<td>adatkapcsolati</td>
+<td>Ethernet</td>
+</tr>
+<tr>
+<td>Csomag</td>
+<td>hálózati</td>
+<td>IP</td>
+</tr>
+<tr>
+<td>Szegmens</td>
+<td>szállítási</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>Datagram</td>
+<td>szállítási</td>
+<td>UDP</td>
+</tr>
+</table>
 
 
 
