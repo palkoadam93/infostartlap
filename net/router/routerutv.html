@@ -45,7 +45,7 @@
           <li><a href="#rip">RIP</a></li>
           <li><a href="#ospf">OSPF</a></li>
           <li><a href="#eigrp">IGRP / EIGRP</a></li>
-          <li><a href="#bgp">BGP</a></li>
+          <li><a href="#bgp">BGP / eBGP</a></li>
           <li><a href="#mpls">MPLS</a></li>
         </ul>
 
@@ -394,12 +394,92 @@
         
         
         
-        <h1 id="bgp">BGP</h1>
+        <h1 id="bgp">BGP / eBGP</h1>
 
         <h3>Sunny Classroom - AS : Interior and border routers, Border Gateway Protocol</h3>
         <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-pYf2NqrL_I?si=sAXaczwE07EGB0TW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 
-        <h3>eBGP</h3>
+        <h3>BGP</h3>
+
+        <p>A <strong>Border Gateway Protocol (BGP)</strong> az internet egyik legfontosabb <strong>útválasztási protokollja</strong>. Az úgynevezett <strong>külső gateway protokollok (EGP)</strong> közé tartozik, és az <strong>autonóm rendszerek (AS-ek)</strong> közötti útvonal-információk cseréjére szolgál.</p>
+
+        <h3>Mit csinál a BGP?</h3>
+
+<ul>
+  <li>Az internet <strong>nagy hálózatai között</strong> terjeszti az útvonalakat.</li>
+  <li>Megmondja a routereknek, <strong>melyik útvonalon érhető el egy IP-hálózat</strong>.</li>
+  <li><strong>Politika-alapú routingot</strong> használ (nem csak a legrövidebb utat nézi).</li>
+</ul>
+
+<h3>Példa</h3>
+
+<p>Ha egy felhasználó el akar érni egy weboldalt egy másik országban, a BGP segít eldönteni:</p>
+
+<ul>
+  <li>melyik <strong>internetszolgáltatón keresztül</strong></li>
+  <li>melyik <strong>hálózaton át</strong></li>
+</ul>
+
+<p>jut el a csomag a célhoz.</p>
+
+<p>👉 Röviden: <strong>a BGP irányítja az internet forgalmát a nagy hálózatok között.</strong></p>
+
+<hr>
+
+<h3>eBGP</h3>
+
+<p>Az <strong>eBGP (External BGP)</strong> a BGP egyik működési módja.</p>
+
+<h3>Jelentése</h3>
+
+<p><strong>External Border Gateway Protocol</strong></p>
+
+<h3>Mire használják?</h3>
+
+<p>Az <strong>eBGP különböző autonóm rendszerek között működik.</strong></p>
+
+<p>Például:</p>
+
+<p>ISP1 (AS100) ↔ ISP2 (AS200)</p>
+
+<p>
+Itt a routerek <strong>eBGP kapcsolatot</strong> hoznak létre, és 
+<strong>útvonalakat cserélnek</strong>.
+</p>
+
+<hr>
+
+<h3>Összefoglalva</h3>
+
+<table>
+<tr>
+<th>Fogalom</th>
+<th>Jelentés</th>
+<th>Hol használják</th>
+</tr>
+
+<tr>
+<td>BGP</td>
+<td>Internetes útválasztási protokoll</td>
+<td>Autonóm rendszerek között</td>
+</tr>
+
+<tr>
+<td>eBGP</td>
+<td>BGP két külön AS között</td>
+<td>Internet szolgáltatók között</td>
+</tr>
+
+</table>
+
+<hr>
+
+<p><strong>Vizsgás megfogalmazás:</strong></p>
+
+<ul>
+<li><strong>BGP:</strong> az internet autonóm rendszerei közötti útválasztási protokoll.</li>
+<li><strong>eBGP:</strong> a BGP külső változata, amely különböző autonóm rendszerek routerei között működik.</li>
+</ul>
 
 
         <h1 id="mpls">MPLS</h1>
