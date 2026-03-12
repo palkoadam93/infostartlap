@@ -33,13 +33,20 @@
         </nav>
       </aside>
       <section>
-        <h1>IaaS - Infrastructure as a Service (infrastruktúra mint szolgáltatás)</h1>
+        <p>Tartalom</p>
+        <ul id="t">
+          <li><a href="#iaas">IaaS - Infrastructure as a Service (infrastruktúra mint szolgáltatás)</a></li>
+          <li><a href="#ec2">Amazon EC2</a></li>
+          <li><a href="#azure">Windows Azure</a></li>
+        </ul>
+
+        <h1 id="iaas">IaaS - Infrastructure as a Service (infrastruktúra mint szolgáltatás)</h1>
 
         <p>Az IaaS, vagyis "infrastruktúra mint szolgáltatás" lehetővé teszi, hogy a felhasználók bérelhető, virtuális hardver-erőforrásokat - például szervereket, tárhelyet és hálózati eszközöket - használjanak a felhőből. Ez a modell nagy rugalmasságot kínál, mivel a felhasználók maguk telepíthetik és konfigurálhatják a kívánt operációs rendszert és szoftvereket. Tipikus példái az Amazon Web Services (AWS), Microsoft Azure és Google Cloud Platform.</p>
         <p>Az IaaS a legnagyobb szabadságot biztosító felhőszolgáltatási modell, amelyben a felhasználó gyakorlatilag bérelhető, virtuális hardver-erőforrásokat kap - például szervereket, adattárolót, hálózati rendszereket vagy tűzfalakat. Ezeket az erőforrásokat rugalmasan lehet skálázni és testre szabni, igény szerint, akár másodperc alapú számlázással. A szolgáltató kizárólag az infrastruktúra fizikai és virtualizált rétegéért felelős, minden más (pl. operációs rendszer, alkalmazások, biztonság) a felhasználó kezében van.</p>
         <p>Az IaaS megoldásokat főként nagyobb IT-csapatok, vállalatok vagy rendszergazdák használják, akiknek speciális vagy egyedi szoftveres környezetre van szükségük. Emellett ideális olyan esetekben, amikor gyorsan kell új szervereket beüzemelni fejlesztési, tesztelési vagy éles környezetekhez. A legismertebb IaaS szolgáltatók közé tartozik az Amazon Web Services (AWS EC2, S3), a Microsoft Azure, a Google Cloud Platform, és az IBM Cloud.</p>
 
-        <h3>Amazon EC2</h3>
+        <h1 id="ec2">Amazon EC2</h1>
 
         <p>Az Amazon EC2 (Elastic Compute Cloud) az Amazon Web Services (AWS) egyik legfontosabb és legismertebb szolgáltatása. Ez a megoldás lehetővé teszi, hogy a felhasználók virtuális gépeket - úgynevezett példányokat (instances) - indítsanak és működtessenek a felhőben, szükség szerint konfigurálva és skálázva őket. Az EC2 fő célja, hogy rugalmas, gyorsan elérhető és költséghatékony számítási kapacitást biztosítson, anélkül, hogy a felhasználónak saját fizikai szervereket kellene vásárolnia vagy karbantartania.</p>
         <p>A szolgáltatás segítségével könnyedén kiválasztható az operációs rendszer (például Linux vagy Windows), valamint a hardverkonfiguráció - mint a processzormagok száma, memória mérete, tárolási kapacitás vagy hálózati beállítások. A felhasználók így teljes kontrollt kapnak a saját virtuális környezetük felett. Egy EC2 példány percek alatt elindítható, és az is egyszerűen beállítható, hogy milyen programokat futtasson, vagy milyen jogosultságokkal rendelkezzen. A szolgáltatás lehetőséget nyújt arra is, hogy a felhasználók saját Amazon Machine Image-et (AMI) hozzanak létre, így új példányokat indíthatnak ugyanazzal a konfigurációval.</p>
@@ -49,7 +56,7 @@
         <p>A biztonság kulcsfontosságú az EC2 esetében. A virtuális gépekhez való hozzáférés kulcspáros SSH hitelesítéssel történik, és finomhangolható tűzfal-beállításokkal (Security Groups) szabályozható, hogy mely IP-címekről és portokon keresztül lehessen hozzáférni az erőforrásokhoz. Az IAM szolgáltatás lehetővé teszi a hozzáférési jogosultságok részletes kezelését, az EBS-meghajtók pedig titkosíthatók, így az adatok védelme minden szinten biztosított.</p>
         <p>Összefoglalva, az Amazon EC2 egy nagy teljesítményű, skálázható és sokoldalú felhőszolgáltatás, amely lehetővé teszi a felhasználók számára, hogy gyakorlatilag bármilyen számítási feladatot a felhőbe helyezzenek át. Rugalmas árazási modellje, fejlett konfigurálhatósága és szoros integrációja más AWS-szolgáltatásokkal ideális megoldássá teszi kezdők, fejlesztők, rendszergazdák és nagyvállalatok számára egyaránt.</p>
 
-        <h3>Windows Azure</h3>
+        <h1 id="azure">Windows Azure</h1>
         <p><a href="https://drive.google.com/file/d/1E9LfquUrbOXliOPKTDxAE1xEsYzfszCT/view?usp=sharing" target=_blank>Azure prezentáció</a></p>
 
         <p>A Microsoft Azure (korábbi nevén Windows Azure) a Microsoft felhőalapú platformja, amely széles körű szolgáltatásokat kínál számítási kapacitás, tárolás, adatbáziskezelés, mesterséges intelligencia, hálózatépítés, analitika és fejlesztés területén. Az Azure célja, hogy segítsen a vállalkozásoknak, fejlesztőknek és IT szakembereknek modern, skálázható és megbízható alkalmazásokat építeni és futtatni anélkül, hogy saját adatközpontot kellene üzemeltetniük. A platform lehetővé teszi mind hibrid, mind teljesen felhőalapú megoldások kialakítását, integrálva a már meglévő Microsoft-technológiákat (mint a Windows Server, SQL Server vagy Active Directory).</p>

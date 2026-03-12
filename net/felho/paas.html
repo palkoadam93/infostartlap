@@ -33,13 +33,25 @@
         </nav>
       </aside>
       <section>
-        <h1>PaaS - Platform as a Service (platform mint szolgáltatás)</h1>
+        <p>Tartalom</p>
+        <ul id="t">
+          <li><a href="#paas">PaaS - Platform as a Service (platform mint szolgáltatás)</a></li>
+          <li><a href="#appengine">Google App Engine</a></li>
+          <li><a href="#stratos">Apache Stratos</a></li>
+          <li><a href="#heroku">Heroku</a></li>
+          <li><a href="#render">Render</a></li>
+          <li><a href="#pany">Python Anywhere</a></li>
+          <li><a href="#netlify">Netlify</a></li>
+          <li><a href="#vercel">Vercel</a></li>
+        </ul>
+
+        <h1 id="paas">PaaS - Platform as a Service (platform mint szolgáltatás)</h1>
 
         <p>A PaaS, vagyis "platform mint szolgáltatás" olyan fejlesztői környezetet biztosít, amelyben a programozók alkalmazásokat készíthetnek, tesztelhetnek és futtathatnak anélkül, hogy a szerverek vagy operációs rendszerek konfigurálásával kellene foglalkozniuk. A szolgáltató biztosítja a szükséges infrastruktúrát, futtatókörnyezetet, adatbázisokat és skálázást. Jó példa erre a Google App Engine vagy a Heroku.</p>
         <p>A PaaS modell fejlesztők számára nyújt egy teljes környezetet alkalmazások létrehozásához, teszteléséhez, üzemeltetéséhez és skálázásához. A szolgáltató biztosítja az összes szükséges háttérrendszert - például szervereket, operációs rendszert, adatbázis-kezelőt, futtatókörnyezetet, verziókezelő rendszert, hibakereső eszközöket stb. A felhasználónak csak az alkalmazás logikájával kell foglalkoznia, nem kell időt vagy energiát áldoznia a rendszeres frissítésekre, hardverkezelésre vagy biztonsági kérdésekre.</p>
         <p>A PaaS tökéletes választás fejlesztési és DevOps csapatok számára, akik gyorsan szeretnének alkalmazásokat építeni, miközben az infrastruktúra üzemeltetésének terhét a szolgáltatóra bízzák. Ilyen szolgáltatás például a Heroku, a Google App Engine, az AWS Elastic Beanstalk vagy a Microsoft Azure App Services. A PaaS modellek gyakran kínálnak skálázási lehetőségeket, integrációt adatbázisokkal, tárolókkal és CI/CD eszközökkel is.</p>
 
-        <h3>Google App Engine</h3>
+        <h1 id="appengine">Google App Engine</h1>
 
         <p>A Google App Engine a Google Cloud Platform (GCP) egyik fő felhőszolgáltatása, amely egy teljes értékű Platform as a Service (PaaS) megoldást kínál. Ez a szolgáltatás lehetővé teszi, hogy a fejlesztők alkalmazásokat futtassanak a Google által kezelt infrastruktúrán anélkül, hogy a szerverek üzemeltetésével, konfigurálásával vagy skálázásával kellene foglalkozniuk. Az App Engine célja az, hogy leegyszerűsítse a webes és háttérrendszerek fejlesztését és üzemeltetését, miközben automatikusan kezeli a skálázást, a terheléselosztást, a biztonságot és az infrastruktúrát.</p>
         <p>A szolgáltatás lehetővé teszi, hogy a fejlesztők olyan kódot telepítsenek, amelyet különféle programozási nyelveken írtak - például Python, Java, Go, Node.js, PHP vagy Ruby - és az App Engine automatikusan létrehozza hozzá a szükséges környezetet. Az alkalmazás ezután automatikusan skálázódik a forgalomnak megfelelően: ha kevés a kérés, csökken az erőforrás-felhasználás, ha sok, akkor a rendszer automatikusan több példányt indít el a háttérben. Ez ideálissá teszi az App Engine-t olyan alkalmazások számára, ahol a forgalom időszakosan vagy drasztikusan változhat.</p>
@@ -48,7 +60,7 @@
         <p>A Google App Engine árazása használat alapú: a felhasználók csak az alkalmazás által ténylegesen felhasznált erőforrások (pl. CPU-idő, memória, hálózati forgalom) után fizetnek. Emellett a Free Tier keretében a fejlesztők havonta bizonyos mennyiségű erőforrást ingyenesen használhatnak, ami különösen hasznos kisebb projektekhez, prototípusokhoz vagy oktatási célokra. Például napi 28 példányóra és 1 GB kimenő hálózati forgalom elérhető térítésmentesen.</p>
         <p>A Google App Engine egy erőteljes, ugyanakkor könnyen használható platform azok számára, akik gyorsan szeretnének megbízható webes vagy mobilháttérrendszereket létrehozni anélkül, hogy mélyen bele kellene merülniük a szerverüzemeltetés vagy skálázás technikai részleteibe. Kiváló választás kezdők és haladó fejlesztők számára egyaránt, különösen, ha a projekt jól illeszkedik a támogatott nyelvekhez és az automatikus skálázás előnyeit szeretné kihasználni. A Google által biztosított globális infrastruktúra és megbízhatóság pedig ideálissá teszi a platformot olyan alkalmazásokhoz, amelyeknél fontos a nagy rendelkezésre állás és alacsony válaszidő világszerte.</p>
 
-        <h3>Apache Stratos</h3>
+        <h1 id="stratos">Apache Stratos</h1>
 
         <p>Az Apache Stratos egy nyílt forráskódú, Platform as a Service (PaaS) rendszer, amely lehetővé teszi alkalmazások és szolgáltatások automatikus telepítését, kezelését és skálázását különféle felhőkörnyezetekben. A projekt célja az volt, hogy egy rugalmas, bővíthető és skálázható platformot nyújtson a fejlesztők és rendszergazdák számára, ahol a teljes alkalmazás-életciklus kezelhető egy egységes, automatizált rendszerben. Az Apache Stratos támogatja a konténerizált és nem konténerizált alkalmazásokat is, valamint lehetőséget ad többféle nyelven (pl. Java, PHP, Python) írt alkalmazások futtatására.</p>
         <p>A Stratos egyik kulcsjellemzője az autonóm skálázás és az önjavító képesség, vagyis képes automatikusan reagálni az alkalmazás terhelésére: ha nő a felhasználói igény, új példányokat indít el, ha csökken, akkor visszaveszi az erőforrásokat. Emellett a rendszer képes felismerni, ha egy példány nem válaszol, és automatikusan lecseréli azt egy újra. Ezáltal nemcsak a teljesítmény, de a megbízhatóság is javul, miközben csökken a kézi beavatkozás szükségessége.</p>
@@ -56,14 +68,14 @@
         <p>A Stratos célja az volt, hogy többféle infrastruktúrán - akár privát, akár publikus felhőkön - is működjön. Így például integrálható az OpenStackkel, Amazon EC2-vel, Dockerrel vagy más virtualizációs és felhőplatformokkal. Ezzel lehetővé válik egy rugalmas és hordozható platform kialakítása, amely nem zárja be a felhasználót egyetlen szolgáltató ökoszisztémájába sem.</p>
         <p>Fontos megemlíteni, hogy az Apache Stratos projekt az Apache Software Foundation égisze alatt futott, azonban az aktív fejlesztése az évek során fokozatosan lelassult, majd gyakorlatilag le is állt. Emiatt ma már inkább történelmi jelentőségű példaként említhető, amely megelőzte a konténerizáció és Kubernetes-alapú PaaS rendszerek térnyerését. Ennek ellenére a Stratos érdekes és hasznos tanulmányi eszköz lehet azok számára, akik szeretnék megérteni, hogyan működött a PaaS-ök első generációja, hogyan lehetett automatizálni a skálázást, és miként valósítható meg egy többkomponensű, önjavító platform.</p>
 
-        <h3>Heroku</h3>
+        <h1 id="heroku">Heroku</h1>
 
         <p>A Heroku egy felhőalapú Platform as a Service (PaaS), amelyet elsősorban fejlesztők számára hoztak létre, hogy egyszerűen és gyorsan telepíthessék, futtathassák és skálázhassák alkalmazásaikat anélkül, hogy az alatta lévő infrastruktúra kezelésével kellene foglalkozniuk. A Heroku egyik legnagyobb előnye az egyszerűség és a rugalmasság: a fejlesztők könnyedén feltölthetik a kódjukat Git segítségével, és a platform automatikusan létrehozza az alkalmazás futtatási környezetét. Ez lehetővé teszi, hogy a programozók teljes mértékben a fejlesztésre és az üzleti logikára koncentráljanak.</p>
         <p>A Heroku támogatja a legnépszerűbb programozási nyelveket, többek között a Ruby, Python, Node.js, Java, PHP és Go nyelveket. Ez széles körű rugalmasságot biztosít, így különböző típusú és méretű projektekhez is ideális. Emellett a Heroku rendelkezik egy gazdag bővítmény-ökoszisztémával, amely lehetővé teszi az adatbázisok, cache-ek, üzenetküldő rendszerek és más szolgáltatások könnyű integrációját. Ezek az add-on-ok segítik az alkalmazások fejlesztését, monitorozását és skálázását.</p>
         <p>A skálázás is egyszerű a Herokuban: ha az alkalmazásnak több erőforrásra van szüksége, a fejlesztők könnyen növelhetik vagy csökkenthetik az erőforrásokat a “dynók” (Heroku futtatóegységek) számának módosításával. Ez a rugalmasság különösen hasznos gyorsan növekvő startupok és olyan projektek esetén, ahol a terhelés gyakran változik. A platform ugyanakkor egyszerű beállítást és folyamatos integrációs/folyamatos telepítési (CI/CD) lehetőségeket is kínál, így támogatva a modern fejlesztési munkafolyamatokat.</p>
         <p>Összességében a Heroku egy könnyen használható, megbízható PaaS platform, amely jelentősen lerövidíti az alkalmazások fejlesztési és üzembe helyezési idejét. Az infrastruktúra kezelése helyett a fejlesztők a kódjukra és az üzleti igényekre koncentrálhatnak, miközben egy skálázható, biztonságos és jól támogatott környezetben dolgoznak. Ezért a Heroku különösen népszerű a startupok, kis- és középvállalkozások, valamint azok között, akik gyorsan szeretnének működő alkalmazásokat indítani a felhőben.</p>
 
-        <h3>Render</h3>
+        <h1 id="render">Render</h1>
 
         <p>A Render egy modern felhőalapú Platform as a Service (PaaS), amely fejlesztőknek és cégeknek kínál egyszerű és költséghatékony megoldást alkalmazások, weboldalak, API-k és háttérszolgáltatások üzemeltetésére. A Render célja, hogy minimalizálja az infrastruktúra kezelésével járó bonyodalmakat, miközben rugalmas, automatikus skálázást és folyamatos telepítést (CI/CD) biztosít. Ez lehetővé teszi, hogy a fejlesztők teljes mértékben a kódra és az üzleti logikára fókuszálhassanak, miközben a platform kezeli a háttérfolyamatokat.</p>
         <p>A Render támogatja a népszerű programozási nyelveket és környezeteket, mint például a Node.js, Python, Ruby, Go vagy Docker konténerek, így sokféle alkalmazás futtatására alkalmas. A szolgáltatás automatikusan kezeli az alkalmazás futtatókörnyezetét, az erőforrások kiosztását, valamint a frissítések bevezetését, ami gyorsabb és megbízhatóbb fejlesztési ciklust eredményez. Ezen túlmenően Render lehetőséget ad adatbázisok (például PostgreSQL) egyszerű létrehozására és menedzselésére, így teljes körű backend megoldásként is használható.</p>
@@ -71,7 +83,7 @@
         <p>Biztonsági és megbízhatósági szempontból a Render titkosítást alkalmaz az adatátvitel során, támogatja az HTTPS-t alapértelmezetten, és folyamatosan figyeli a rendszer állapotát, hogy minimalizálja a leállások és hibák kockázatát. A fejlesztők így biztosak lehetnek abban, hogy alkalmazásaik stabilan és biztonságosan futnak a platformon, miközben könnyedén hozzáférnek a szükséges fejlesztői eszközökhöz.</p>
         <p>Összefoglalva, a Render egy modern, rugalmas és könnyen használható PaaS megoldás, amely ideális választás mindazoknak, akik egyszerűsíteni szeretnék alkalmazásaik fejlesztését és üzemeltetését, miközben szeretnének élni a felhő nyújtotta előnyökkel, mint a skálázhatóság, automatizált telepítés és költséghatékonyság. Különösen vonzó lehet azoknak, akik Heroku-hoz hasonló funkcionalitást keresnek, de modernebb megoldásokat és kedvezőbb árakat szeretnének.</p>
 
-        <h3>Python Anywhere</h3>
+        <h1 id="pany">Python Anywhere</h1>
 
         <p>A PythonAnywhere egy felhőalapú Platform as a Service (PaaS), amely kifejezetten Python fejlesztők számára készült. A szolgáltatás lehetővé teszi, hogy Python alapú webalkalmazásokat gyorsan és egyszerűen telepítsünk, futtassunk és menedzseljünk anélkül, hogy saját szervert kellene beállítani vagy karbantartani. A PythonAnywhere különösen hasznos azoknak a fejlesztőknek, akik egyszerű, könnyen kezelhető környezetet keresnek Python projektekhez, legyen szó kisebb weboldalakról vagy adatfeldolgozó alkalmazásokról.</p>
         <p>A platform teljes körű webes felületet biztosít, amelyen keresztül elérhető egy webes konzol, szerkesztők, futtatási környezetek és adatbázisok is. Ez azt jelenti, hogy a fejlesztők bárhonnan, bármilyen eszközről dolgozhatnak kódjukon anélkül, hogy telepíteniük kellene a Python fejlesztőkörnyezetet a helyi gépükre. A PythonAnywhere támogatja a különféle Python webkeretrendszereket, például a Django-t és a Flask-et, így könnyen létrehozhatók és futtathatók modern webalkalmazások.</p>
@@ -79,14 +91,14 @@
         <p>Biztonsági szempontból a PythonAnywhere titkosított kapcsolatokat használ, és többféle előfizetési csomagot kínál, amelyek különböző szintű erőforrásokat és hozzáférési lehetőségeket biztosítanak. Ingyenes csomagja is elérhető, amely lehetőséget ad a kezdőknek és tanulóknak, hogy kipróbálják a szolgáltatást korlátozott kapacitással.</p>
         <p>Összességében a PythonAnywhere ideális választás azok számára, akik egyszerű, könnyen használható felhőplatformot keresnek Python alapú alkalmazások fejlesztéséhez és futtatásához. A platform gyors indítást, webes hozzáférést és kényelmes kezelőfelületet biztosít, így különösen népszerű a tanulók, oktatók, valamint a kisebb fejlesztőcsapatok körében.</p>
 
-        <h3>Netlify</h3>
+        <h1 id="netlify">Netlify</h1>
 
         <p>A Netlify egy felhőalapú Platform as a Service (PaaS), amelyet elsősorban webfejlesztőknek terveztek, hogy egyszerűen és gyorsan telepíthessék, hosztolhassák és kezelhessék statikus weboldalaikat és modern webalkalmazásaikat. A Netlify különösen népszerű a statikus site generátorokkal (például Gatsby, Hugo, Jekyll) készült projektek esetében, ahol a weboldalakat előre generálják, és így rendkívül gyorsan, biztonságosan tudnak futni világszerte.</p>
         <p>A platform kulcsfontosságú eleme az automatikus build és deploy folyamat, amely közvetlenül integrálódik a népszerű verziókezelő rendszerekhez, mint a GitHub, GitLab vagy Bitbucket. Amikor a fejlesztők módosítják a kódot, a Netlify automatikusan lefuttatja az építési folyamatot, majd azonnal elérhetővé teszi az új verziót a globális tartalomelosztó hálózatán (CDN) keresztül. Ez az automatizáció jelentősen felgyorsítja a fejlesztési ciklust és csökkenti az üzemeltetési költségeket.</p>
         <p>A Netlify emellett támogatja a dinamikus funkcionalitásokat is a serverless funkciók segítségével, amelyek révén a fejlesztők könnyedén beépíthetnek backend logikát, például űrlapkezelést, hitelesítést vagy adatbázis-műveleteket, anélkül hogy külön szervereket kellene üzemeltetniük. Emellett a Netlify kezel egy egyszerű, intuitív kezelőfelületet, ahol konfigurálhatók az egyedi domainnevek, HTTPS tanúsítványok, környezeti változók és egyéb fejlett beállítások.</p>
         <p>Összességében a Netlify egy erőteljes és felhasználóbarát platform, amely ideális választás mindazok számára, akik gyorsan szeretnének modern, skálázható és biztonságos weboldalakat létrehozni, különösen a frontend fejlesztők és kis- vagy középvállalkozások körében. A szolgáltatás egyszerűsége és automatizáltsága nagyban megkönnyíti a fejlesztési és üzemeltetési munkát, így időt és erőforrást takarít meg.</p>
 
-        <h3>Vercel</h3>
+        <h1 id="vercel">Vercel</h1>
 
         <p>A Vercel egy modern felhőalapú Platform as a Service (PaaS), amely kifejezetten a frontend fejlesztők számára készült, hogy egyszerűen és gyorsan telepíthessék, hosztolhassák és skálázhassák webalkalmazásaikat. A platform erősen integrált a Next.js keretrendszerrel, amelyet a Vercel fejlesztői hoztak létre, így különösen optimalizált dinamikus és statikus webalkalmazások készítésére egyaránt. Emellett a Vercel támogatja a legtöbb népszerű frontend technológiát, így sokféle projekt számára ideális választás lehet.</p>
         <p>A Vercel egyik legfontosabb előnye az automatikus folyamatos integráció és telepítés (CI/CD): a fejlesztők egyszerűen összekapcsolhatják kódjukat GitHub, GitLab vagy Bitbucket tárolóval, és a Vercel minden egyes kódváltoztatás után automatikusan lefordítja, teszteli és telepíti az alkalmazást. Ez a folyamat rendkívül gyors, így a fejlesztési ciklusok jelentősen lerövidülnek, és a változtatások azonnal elérhetővé válnak a felhasználók számára.</p>
