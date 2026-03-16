@@ -85,7 +85,7 @@ button a:hover {
         background-size:cover;
     }
     #dev {
-        background-image: url("../dev/programming-languages_label.png");
+        background-image: url("../dev/img/programming-languages_label.png");
         background-attachment: fixed;/*CSAK ENNYIT ÍRTAM HOZZÁ!!!*/
         background-repeat: no-repeat;
         background-position: center;
@@ -141,14 +141,14 @@ button a:hover {
         background-size:cover;
     }
     #swfejl {
-        background-image: url("../dev/swfejl/ai-generated-8775235_1280.png");
+        background-image: url("../dev/img/ai-generated-8775235_1280.png");
         background-attachment: fixed;/*CSAK ENNYIT ÍRTAM HOZZÁ!!!*/
         background-repeat: no-repeat;
         background-position: center;
         background-size:cover;
     }
     #webprog {
-        background-image: url("../dev/blogging-7308532_1280-169.png");
+        background-image: url("../dev/img/blogging-7308532_1280-169.png");
         background-attachment: fixed;/*CSAK ENNYIT ÍRTAM HOZZÁ!!!*/
         background-repeat: no-repeat;
         background-position: center;
