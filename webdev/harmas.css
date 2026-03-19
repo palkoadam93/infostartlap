@@ -1,4 +1,4 @@
-#harmas {
+.harmas {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     height: 20rem;
@@ -11,9 +11,30 @@
     color: white;
 }
 
-#harmas h2, #harmas p {padding: 0 2rem;}
+#streaming {
+    background-image: url('img/ron_hoekstra-video-marketing-7579808_1280.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
 
-#vizsga:hover {
+#social {
+    background-image: url('img/talhakhalil007-email-4284157_1280.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#webshop {
+    background-image: url('img/megan_rexazin_conde-store-4156934_1280.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.harmas h2, .harmas p {padding: 0 2rem;}
+
+#vizsga:hover, #streaming:hover, #social:hover, #webshop:hover {
     background-image: none;
     color: #0881A3;
     transition: .5s;
