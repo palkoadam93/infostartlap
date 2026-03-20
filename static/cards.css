@@ -8,8 +8,11 @@
 }
 
 /* Fix szélesség a kártyáknak – pont 4 fér ki 80%-ba (mínusz 3×20px gap) */
-.cards-container a {
+.cards-container > * {
   width: calc((100% - 60px) / 4); /* 4 kártya közé 3 gap, azaz 3×20px = 60px */
+}
+
+.cards-container a {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
