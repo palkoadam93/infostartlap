@@ -106,14 +106,14 @@ button a:hover {
         background-size:cover;
     }
     #graphics {
-        background-image: url("../graphics/ai-generated-8166706_1920-169.png");
+        background-image: url("../graphics/img/ai-generated-8166706_1920-169.png");
         background-attachment: fixed;/*CSAK ENNYIT ÍRTAM HOZZÁ!!!*/
         background-repeat: no-repeat;
         background-position: center;
         background-size:cover;
     }
     #alcimjatek {
-        background-image: url("../graphics/game-controller-5619105_1280.jpg");
+        background-image: url("../graphics/img/game-controller-5619105_1280.jpg");
         background-attachment: fixed;/*CSAK ENNYIT ÍRTAM HOZZÁ!!!*/
         background-repeat: no-repeat;
         background-position: center;
@@ -134,7 +134,7 @@ button a:hover {
         background-size:cover;
     }
     #haromde {
-        background-image: url("../graphics/3d/laserwallp.jpg");
+        background-image: url("../graphics/img/laserwallp.jpg");
         background-attachment: fixed;/*CSAK ENNYIT ÍRTAM HOZZÁ!!!*/
         background-repeat: no-repeat;
         background-position: center;

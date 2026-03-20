@@ -4,37 +4,17 @@
     height: 20rem;
 }
 
-#kepszerk {
-    background-image: url('../kep/woman-2435605_1280-169.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-#keppaly {
-    background-image: url('../kep/photographer-2179204_1280.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-#aikep {
-    background-image: url('../kep/tengrai_image_1707657722_059395.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
 #conceptart {
-    background-image: url('../muv/digitalhands.jpg');
+    background-image: url('img/digitalhands.jpg');
     background-size: cover;
-    color: white;
 }
 #storyboard {
-    background-image: url('../muv/storyboarding-books-best.jpg');
+    background-image: url('img/storyboarding-books-best.jpg');
     background-size: cover;
     color: white;
 }
 #manga {
-    background-image: url('../muv/cartoon-5190961_1280.jpg');
+    background-image: url('img/cartoon-5190961_1280.jpg');
     background-size: cover;
     color: white;
 }
