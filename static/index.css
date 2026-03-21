@@ -71,7 +71,7 @@ button a:hover {
         background-size:cover;
     }
     #rendszer {
-        background-image: url("../rendszer/circuit.jpg");
+        background-image: url("../rendszer/img/circuit.jpg");
         background-attachment: fixed;/*CSAK ENNYIT ÍRTAM HOZZÁ!!!*/
         background-repeat: no-repeat;
         background-position: center;
