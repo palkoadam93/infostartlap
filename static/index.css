@@ -78,7 +78,7 @@ button a:hover {
         background-size:cover;
     }
     #net {
-        background-image: url("../net/globe-8704013_1280.jpg");
+        background-image: url("../net/img/globe-8704013_1280.jpg");
         background-attachment: fixed;/*CSAK ENNYIT ÍRTAM HOZZÁ!!!*/
         background-repeat: no-repeat;
         background-position: center;
